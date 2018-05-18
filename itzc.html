@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.3, maximum-scale=1.0" />
+	<title>速办网&nbsp;|&nbsp;FastKD.COM</title>
+	<link rel="icon" href="static/img/FastKD.ico"   type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="./static/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="./static/css/main.css"/>
+	<script type="text/javascript" src="./static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="./static/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./static/js/respond.min.js"></script>
+	<script type="text/javascript" src="./static/js/main.js"></script>
+
+	<script type="text/javascript">
+        $(function(){
+            //产品链接
+            $("#system").on("click",function(){
+                window.location.href="http://cloud-open.cn/index.php?c=article&a=type&tid=409";
+            })
+            $("#computer").on("click",function(){
+                window.location.href="http://cloud-open.cn/index.php?c=article&a=type&tid=433";
+            })
+            $("#host").on("click",function(){
+                window.location.href="http://cloud-open.cn/yunzhuji/yzjpc.html";
+            })
+
+            //行点击事件
+            $('#dxproduct').on('click-row.bs.table', function (e, row, element)
+            {
+
+            });
+        });
+
+	</script>
+
+</head>
+<body>
+<div class="container-fluid">
+	<div class="head">
+		<ul>
+			<li><a href="home.html">首页</a></li>
+			<li><a href="huod.html" >活动专区</a></li>
+			<li><a href="wangl.html" >网络营销</a></li>
+			<li><a href="qiytx.html">企业通信</a></li>
+			<li><a href="itw.html" style="background-color: #f2f2f2;" >IT外包</a></li>
+			<li><a href="xit.html">系统集成</a></li>
+			<li><a href="qiyy.html">企业云</a></li>
+			<li><a href="jiat.html">家庭宽带</a></li>
+			<li><a href="./about.html" >关于我们</a></li>
+			<!---第0种-->
+			<div id="li_0" >
+				<li style="width: 11.5%" id="kong"><a style="background-color: #dcdddd"></a></li>
+				<li style="width: 3%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel"  onmousemove="over1('tel');this.style.cursor='hand'" onmouseout="out1('tel')"    >
+					<img width="100%" height="30px"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话.png"/>
+				</li>
+				<li style="width: 3%; padding:0px" id="email" onmousemove="over1('email')" onmouseout="out1('email')">
+					<img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱.png"/>
+				</li>
+			</div>
+
+
+			<!---第一种--->
+			<div id="li_1" hidden >
+				<li style="width: 1%" id="kong"><a style="background-color: #dcdddd"></a></li>
+				<li style="width: 13.5%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel" onmousemove="over2('tel')" onmouseout="out2('tel')">
+					<a href=""><img width="100%"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话_.png"/></a>
+				</li>
+				<li style="width: 3%;     padding:0px" id="email" onmousemove="over('email')" onmouseout="out('email')">
+					<img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱.png"/>
+				</li>
+			</div>
+
+
+			<!---第二种--->
+			<div id="li_2" hidden>
+				<li style="width: 1%" id="kong"><a style="background-color: #dcdddd"></a></li>
+				<li style="width: 3%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel2" onmousemove="over3('tel2')" onmouseout="out3('tel2')">
+					<img width="100%"   height="30px"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话.png"/>
+				</li>
+				<li style="width: 13.5%;     padding:0px" id="email2" onmousemove="over('email2')" onmouseout="out3('email2')">
+					<a href=""><img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱_.png"/></a>
+				</li>
+			</div>
+		</ul>
+	</div>
+	<div  class="main">
+		<div class="headerx" >
+			<table border="0px">
+				<tr>
+					<td width="190px" style="vertical-align:bottom">
+						<img width="100%" src="./static/img/web/kdsuban/LOGO.png" />
+					</td>
+					<td style="width:50px"></td>
+					<td><div  class="secmenu" ><a href="itw.html">&nbsp;&nbsp;电脑闪修&nbsp;&nbsp;</a></div></td>
+					<td><div  class="secmenu" ><a href="itwb.html">&nbsp;&nbsp;外包服务&nbsp;&nbsp;</a></div></td>
+					<td><span style="padding-bottom:10px; border-bottom:1px solid #000;color: #A40B5D">&nbsp;&nbsp;驻场服务&nbsp;&nbsp;</span></td>
+					<td><div  class="secmenu" ><a href="itqg.html">&nbsp;&nbsp;全国范围&nbsp;&nbsp;</a></div></td>
+					<td style="width:60px"></td>
+					<td width="200px" style="vertical-align:bottom">	
+						<div class="search" style=""  >
+							<input type="text" name="fname"  style="border:none;width: 160px"/>
+							<img  src="./static/img/web/kdsuban/搜索_放大镜.png" /><br/>
+							<hr style="background-color:#000000;height: 1.5px;width: 180px;padding-bottom:0px;margin-bottom:0px;margin-top:0px" />
+						</div> 
+					</td>
+				</tr>
+			</table>
+		</div>		
+		<div class="ptitle">资深<span style="color: #b20059">专业技术</span>工程师 / <span style="color: #b20059">随时提供</span>贴身服务 </div>
+
+	</div>
+
+	<img src="static/img/web/it/banner_itzc.jpg" width="100%">
+
+
+	<div class="main" style="width:80%;margin-top: 40px">
+
+		<img src="static/img/web/it/7888.png" width="32%" style="margin-bottom: 30px">
+
+		<p style="font-size: 22px">企业<span style="font-family: GOTHIC">IT</span>工作环境稳定性要求较高?</p>
+		<p style="font-size: 22px">企业人力资源管理成本太大?</p>
+		<p style="font-size: 28px;margin-top: 20px">那么，</p>
+		<p style="font-size: 28px;margin-top: 28px">您一定需要<span style="color: #0069bb"><span style="font-family: GOTHIC">IT</span>驻场服务</span>!</p>
+		<p style="font-size: 36px;margin-top: 35px">速办网为您<span style="color: #0069bb">提供的</span>不只是网管</p>
+		<p style="font-size: 36px;margin-top: 37px">而是<span style="color: #b20059">资深大拿</span>!</p>
+		<p style="font-size: 36px;margin-top: 37px">速办网为您<span style="color: #0069bb">提供的</span>不只是工程师</p>
+		<p style="font-size: 36px;margin-top: 37px">而是<span style="color: #b20059">专业团队</span>!</p>
+
+
+		<a href="skype:+864008207778?call" target="_blank"><img src="static/img/web/it/mfzx.png" width="28%" style="margin-top: 30px"></a>
+
+		<hr style="margin-top:40px;margin-bottom:40px;background-color:#727171;height: 1px;width: 100%" />
+
+		<p style="color: black;font-size: 35px">我们提供的服务内容</p>
+		<p style="color: #b20059;font-size: 35px;font-family: GOTHIC;margin-top: 15px">SERVICE CONTENT</p>
+
+		<table style="margin-top: 30px;font-size: 13px">
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT驻场_电脑维护.png" /><br/>电脑维护</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT驻场_系统维护.png" /><br/>系统维护</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT驻场_软件驱动.png" /><br/>软件驱动</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT驻场_分区重装.png" /><br/>分区重装</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT驻场_查杀病毒.png" /><br/>查杀病毒</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT驻场_网络搭建.png" /><br/>网络搭建</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT驻场_设备安装.png" /><br/>设备安装</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT驻场_外设视讯.png" /><br/>外设视讯</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT驻场_域控服务器.png" /><br/>域控服务器</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT驻场_远程支持.png" /><br/>远程支持</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT驻场_代送检修.png" /><br/>代送检修</td>
+		</table>
+
+		<hr style="margin-top:25px;margin-bottom:25px;background-color:#727171;height: 1px;width: 45%" />
+
+		<div  style="font-size: 13px;margin-bottom: 40px">
+			<p style="font-size: 20px">速办网提供桌面设备支持、网络维护管理、服务器维护管理等各类<span style="font-family: GOTHIC">IT</span>服务人员派驻服务，</p>
+			<p style="font-size: 20px;margin-top: 20px">通过流程化的预防性体系和严格的工程师绩效考核体系，控制服务质量和安全保密等客户刚性需求。</p>
+		    <p style="margin-top: 20px">● 每周五工作日（周一至周五），按照客户工作时间提供工程师派驻服务</p>
+			<p>● 非工程师派驻时间（如法定休息日），客户也可以获得全天候远程服务</p>
+			<p>● 将企业人力资源管理成本将至最低，服务不满意可随时更换派驻工程师</p>
+			<p>● 我们将提供丰富详尽、专业的<span style="font-family: GOTHIC">IT</span>运维报表功能和<span style="font-family: GOTHIC">IT</span>管理风险预警报告机制</p>
+		</div>
+
+	</div>
+
+	<div class="footer" >
+		沪<span class="zftb">ICP</span>备<span class="zftb">1XXXXXXX</span>号<span class="zftb">-1 Copyright © 2018 </span>上海罗夏信息技术有限公司 - 保留所有权利
+	</div>
+</div>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6bf7ae9b5212b8c52b57065299f133f8";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</body>
+</html>

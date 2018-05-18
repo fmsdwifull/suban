@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.3, maximum-scale=1.0" />
+	<title>速办网&nbsp;|&nbsp;FastKD.COM</title>
+	<link rel="icon" href="static/img/FastKD.ico"   type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="./static/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="./static/css/main.css"/>
+	<script type="text/javascript" src="./static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="./static/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./static/js/respond.min.js"></script>
+	<script type="text/javascript" src="./static/js/main.js"></script>
+
+	<script type="text/javascript">
+        $(function(){
+            //产品链接
+            $("#system").on("click",function(){
+                window.location.href="http://cloud-open.cn/index.php?c=article&a=type&tid=409";
+            })
+            $("#computer").on("click",function(){
+                window.location.href="http://cloud-open.cn/index.php?c=article&a=type&tid=433";
+            })
+            $("#host").on("click",function(){
+                window.location.href="http://cloud-open.cn/yunzhuji/yzjpc.html";
+            })
+
+            //行点击事件
+            $('#dxproduct').on('click-row.bs.table', function (e, row, element)
+            {
+
+            });
+        });
+
+	</script>
+
+</head>
+<body>
+<div class="container-fluid">
+	<div class="head">
+		<ul>
+			<li><a href="home.html">首页</a></li>
+			<li><a href="huod.html" >活动专区</a></li>
+			<li><a href="wangl.html" >网络营销</a></li>
+			<li><a href="qiytx.html">企业通信</a></li>
+			<li><a href="itw.html" style="background-color: #f2f2f2;" >IT外包</a></li>
+			<li><a href="xit.html">系统集成</a></li>
+			<li><a href="qiyy.html">企业云</a></li>
+			<li><a href="jiat.html">家庭宽带</a></li>
+			<li><a href="./about.html" >关于我们</a></li>
+			<!---第0种-->
+			<div id="li_0" >
+				<li style="width: 11.5%" id="kong"><a style="background-color: #dcdddd"></a></li>
+				<li style="width: 3%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel"  onmousemove="over1('tel');this.style.cursor='hand'" onmouseout="out1('tel')"    >
+					<img width="100%" height="30px"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话.png"/>
+				</li>
+				<li style="width: 3%; padding:0px" id="email" onmousemove="over1('email')" onmouseout="out1('email')">
+					<img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱.png"/>
+				</li>
+			</div>
+
+
+			<!---第一种--->
+			<div id="li_1" hidden >
+				<li style="width: 1%" id="kong"><a style="background-color: #dcdddd"></a></li>
+				<li style="width: 13.5%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel" onmousemove="over2('tel')" onmouseout="out2('tel')">
+					<a href=""><img width="100%"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话_.png"/></a>
+				</li>
+				<li style="width: 3%;     padding:0px" id="email" onmousemove="over('email')" onmouseout="out('email')">
+					<img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱.png"/>
+				</li>
+			</div>
+
+
+			<!---第二种--->
+			<div id="li_2" hidden>
+				<li style="width: 1%" id="kong"><a style="background-color: #dcdddd"></a></li>
+				<li style="width: 3%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel2" onmousemove="over3('tel2')" onmouseout="out3('tel2')">
+					<img width="100%"   height="30px"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话.png"/>
+				</li>
+				<li style="width: 13.5%;     padding:0px" id="email2" onmousemove="over('email2')" onmouseout="out3('email2')">
+					<a href=""><img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱_.png"/></a>
+				</li>
+			</div>
+		</ul>
+	</div>
+	<div  class="main">
+		<div class="headerx" >
+			<table border="0px">
+				<tr>
+					<td width="190px" style="vertical-align:bottom">
+						<img width="100%" src="./static/img/web/kdsuban/LOGO.png" />
+					</td>
+					<td style="width:50px"></td>
+					<td><div  class="secmenu" ><a href="itw.html">&nbsp;&nbsp;电脑闪修&nbsp;&nbsp;</a></div></td>
+					<td><div  class="secmenu" ><a href="itwb.html">&nbsp;&nbsp;外包服务&nbsp;&nbsp;</a></div></td>
+					<td><div  class="secmenu" ><a href="itzc.html">&nbsp;&nbsp;驻场服务&nbsp;&nbsp;</a></div></td>
+					<td><span style="padding-bottom:10px; border-bottom:1px solid #000;color: #A40B5D">&nbsp;&nbsp;全国范围&nbsp;&nbsp;</span></td>
+					<td style="width:60px"></td>
+					<td width="200px" style="vertical-align:bottom">	
+						<div class="search" style=""  >
+							<input type="text" name="fname"  style="border:none;width: 160px"/>
+							<img  src="./static/img/web/kdsuban/搜索_放大镜.png" /><br/>
+							<hr style="background-color:#000000;height: 1.5px;width: 180px;padding-bottom:0px;margin-bottom:0px;margin-top:0px" />
+						</div> 
+					</td>
+				</tr>
+			</table>
+		</div>		
+	<!--
+		<div class="headerx" style="float: bottom">
+			<div style="float:left;padding: 0px;margin: 0px;text-align: left;width: 21%">
+				<img style="width: 100%"; src="./static/img/web/kdsuban/LOGO.png" />
+			</div>
+			<div  class="secmenu" style="margin-top: 1.2%">
+				<span ><a href="itw.html">&nbsp;&nbsp;电脑闪修&nbsp;&nbsp;</a></span>
+				<span style="margin-left: 25px"><a href="itwb.html">&nbsp;&nbsp;<span style="font-family: GOTHIC">IT</span>外包服务&nbsp;&nbsp;</a></span>
+				<span style="margin-left: 25px"><a href="itzc.html">&nbsp;&nbsp;<span style="font-family: GOTHIC">IT</span>驻场服务&nbsp;&nbsp;</a></span>
+				<span style="margin-left: 25px;padding-bottom:10px; border-bottom:1px solid #000;color: #A40B5D"><a href="itqg.html" style="color: #A40B5D">&nbsp;&nbsp;全国范围&nbsp;&nbsp;</a></span>
+			</div>
+			<div class="search" >
+				<input type="text" name="fname"  style="border:none;width: 160px"/>
+				<img style="margin-top: 2px" src="./static/img/web/kdsuban/搜索_放大镜.png" /><br/>
+				<hr style="margin-top:8px;background-color:#000000;height: 1.5px;width: 180px;float: right" />
+			</div>
+		</div>
+		-->
+		<div class="ptitle">您在全国<span style="color: #b20059">任何地方</span>，都能享受到我们的<span style="color: #b20059">专业服务</span></div>
+
+	</div>
+
+	<img src="static/img/web/it/banner_qg.jpg" width="100%">
+
+
+	<div class="main" style="width:80%;margin-top: 40px">
+		<table  style="font-size: 13px">
+			<tr>
+				<td width="33.3%">
+					<p style="font-size: 20px;color: #b20059">多层面<span style="font-family: GOTHIC">IT</span>运维管理服务</p>
+					<div style="text-align: left;padding-left: 15%">
+						<p>速办网拥有强大的多层面<span style="font-family: GOTHIC">IT</span>服务团队，平台在全</p>
+						<p>国范围内拥有<span style="font-family: GOTHIC">15000</span>+专业的IT工程师，能够为企</p>
+						<p>业提供跨地域的、统一标准的<span style="font-family: GOTHIC">IT</span>服务管理。</p>
+						<p>无论您在哪，有何种<span style="font-family: GOTHIC">IT</span>问题，速办网都能在第一</p>
+						<p>时间零距离帮助您解决问题。</p>
+					</div>
+				</td>
+				<td width="0.05%" style="background-color: #575555"/>
+				<td width="33.3%">
+					<p style="font-size: 20px;color: #b20059">灵活机制的服务方式</p>
+					<div style="text-align: left;padding-left: 15%">
+					<p>根据客户在成长发展期间，不同的<span style="font-family: GOTHIC">IT</span>服务需求升</u></p>
+					<p>级，速办网提供适合、贴切的<span style="font-family: GOTHIC">IT</span>服务方式。各种</p>
+					<p>方式均可根据您业务的同步发展无缝调整升级，</p>
+					<p>护航企业发展的每一个阶段，其中包括派单单次</p>
+					<p>服务、常驻服务、系统咨询等。</p>
+					</div>
+				</td>
+				<td width="0.05%" style="background-color: #575555"/>
+				<td width="33.3%">
+					<p style="font-size: 20px;color: #b20059">完善成熟的平台系统</p>
+					<div style="text-align: left;padding-left: 15%">
+					<p>速办网是平台化服务工具，在互联网+大背景下</u></p>
+					<p>通过资源整合，及庞大的资源信息集群，为客户</p>
+					<p>搭建一个低成本、高价值、智能化的互联网+<span style="font-family: GOTHIC">IT</span></p>
+					<p>运维服务平台，同时提供定制化、专业化的一站</p>
+					<p>式<span style="font-family: GOTHIC">IT</span>服务解决方案，满足各类企业客户需求。</p>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+
+		<a href="skype:+864008207778?call" target="_blank"><img src="static/img/web/it/mfzx.png" width="28%" style="margin-top: 30px"></a>
+
+		<hr style="margin-top:40px;margin-bottom:40px;background-color:#727171;height: 1px;width: 100%" />
+
+		<p style="color: black;font-size: 35px">我们的客户满天下</p>
+		<p style="color: #b20059;font-size: 35px;font-family: GOTHIC;margin-top: 15px">CUSTOMERS ARE ALL OVER THE COUNTRY</p>
+		
+		<table style="width: 90%;margin-left: 5%;margin-top: 30px">
+			<tr>
+				<td style="width: 33.3%">
+					<img src="static/img/web/it/案例_京东.png" width="100%">
+				</td>
+				<td style="background-color: #f7f7f7;font-size: 13px;color: #595757;width: 33.3%;vertical-align: bottom;padding: 0px">
+					<div style="margin: 0px">
+						<p style="font-size: 20px;color: black">麦当劳服务经典案例</p>
+						<p style="margin-bottom: 0px;padding-bottom: 0px">为麦当劳各连锁店面提供了最优化的</p>
+						<p style="margin-top: 0px;padding-top: 0px;margin-bottom: 0px">各餐厅<span style="font-family: GOTHIC">IT</span>运维解决方案</p>
+						<p style="color: black;font-size: 16px;margin-top: 0px;padding-top: 0px">▼</p>
+					</div>
+				</td>
+				<td style="width: 33.3%">
+					<img src="static/img/web/it/案例_交通银行.png" width="100%" style="display: block">
+				</td>
+			</tr>
+
+			<tr>
+				<td style="background-color: #f7f7f7;font-size: 13px;color: #595757;vertical-align: top">
+					<div>
+						<p style="color: black;font-size: 16px;margin-top: 8px">▲</p>
+						<p style="font-size: 20px;color: black">京东电商服务案例</p>
+						<p style="margin-bottom: 0px;padding-bottom: 0px">对京东电商的<span style="font-family: GOTHIC">PC</span>和<span style="font-family: GOTHIC">OA</span>设备</p>
+						<p style="margin-top: 0px;padding-top: 0px;margin-bottom: 0px">实现了配置、安装和日常运维</p>
+						<p style="margin-top: 0px;padding-top: 0px;margin-bottom: 0px">提供高效、便捷、智能、的<span style="font-family: GOTHIC">IT</span>运维服务</p>
+					</div>
+				</td>
+				<td>
+					<img src="static/img/web/it/案例_麦当劳.png" width="100%">
+				</td>
+
+				<td style="background-color: #f7f7f7;font-size: 13px;color: #595757;vertical-align: top">
+					<div>
+						<p style="color: black;font-size: 16px;margin-top: 8px">▲</p>
+						<p style="font-size: 20px;color: black">交通银行服务经典案例</p>
+						<p style="margin-bottom: 0px;padding-bottom: 0px">通过全国众多工程师资源和标准化产品</p>
+						<p style="margin-top: 0px;padding-top: 0px;margin-bottom: 0px">满足交行满天星项目后续维护提供的支持保障</p>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<img src="static/img/web/it/案例_优衣库.png" width="100%">
+				</td>
+				<td style="background-color: #f7f7f7;font-size: 13px;color: #595757;vertical-align: bottom">
+					<div>
+						<p style="font-size: 20px;color: black">上海虹桥南丰城服务案例</p>
+						<p style="margin-bottom: 0px;padding-bottom: 0px">多领域、一站式弱点项目施工维护及全平台</p>
+						<p style="margin-top: 0px;padding-top: 0px;margin-bottom: 0px">支持,为上海虹桥南丰城提供了全面<span style="font-family: GOTHIC">IT</span>技术保障</p>
+						<p style="color: black;font-size: 16px;margin-top: 0px;padding-top: 0px">▼</p>
+					</div>
+				</td>
+				<td>
+					<img src="static/img/web/it/案例_一嗨租车.png" width="100%">
+				</td>
+			</tr>
+
+			<tr>
+				<td style="background-color: #f7f7f7;font-size: 13px;color: #595757;vertical-align: top">
+					<div>
+						<p style="color: black;font-size: 16px;margin-top: 8px">▲</p>
+						<p style="font-size: 20px;color: black">优衣库服务案例</p>
+						<p style="margin-bottom: 0px;padding-bottom: 0px">为优衣库各门店提供定制、高效化<span style="font-family: GOTHIC">IT</span>运维服务</p>
+						<p style="margin-top: 0px;padding-top: 0px;margin-bottom: 0px">使其服务响应更及时、工作协同化更便捷</p>
+					</div>
+				</td>
+				<td>
+					<img src="static/img/web/it/案例_虹桥南丰城.png" width="100%">
+				</td>
+
+				<td style="background-color: #f7f7f7;font-size: 13px;color: #595757;vertical-align: top">
+					<div>
+						<p style="color: black;font-size: 16px;margin-top: 8px">▲</p>
+						<p style="font-size: 20px;color: black">一嗨租车服务案例</p>
+						<p style="margin-bottom: 0px;padding-bottom: 0px">一嗨租车全国网点众多、各网点设备量大的运</p>
+						<p style="margin-top: 0px;padding-top: 0px;margin-bottom: 0px">维需求，对网点电脑加域、打印机、<span style="font-family: GOTHIC">VPN</span>、录</p>
+						<p style="margin-top: 0px;padding-top: 0px;margin-bottom: 0px">像机、网络电话、<span style="font-family: GOTHIC">POS</span>机等提供<span style="font-family: GOTHIC">IT</span>维护服务</p>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+
+		<hr style="margin-top:40px;margin-bottom:40px;background-color:#727171;height: 1px;width: 100%" />
+
+		<p style="color: black;font-size: 35px">我们提供的服务内容</p>
+		<p style="color: #b20059;font-size: 35px;font-family: GOTHIC;margin-top: 15px">SERVICE CONTENT</p>
+
+		<table style="margin-top: 30px;font-size: 13px">
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT全国_电脑维护.png" /><br/>电脑维护</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT全国_系统维护.png" /><br/>系统维护</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT全国_POS系统.png" /><br/><span style="font-family: GOTHIC">POS</span>系统</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT全国_服务器.png" /><br/>服务器</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT全国_查杀病毒.png" /><br/>查杀病毒</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT全国_网络搭建.png" /><br/>网络搭建</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT全国_设备安装.png" /><br/>设备安装</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT全国_外设视讯.png" /><br/>外设视讯</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT全国_域控服务器.png" /><br/>域控服务器</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT全国_远程支持.png" /><br/>远程支持</td>
+			<td><img style="width: 50%;margin-bottom: 5px" src="static/img/web/it/IT全国_门禁监控.png" /><br/>门禁监控</td>
+		</table>
+
+		<hr style="margin-top:25px;margin-bottom:25px;background-color:#727171;height: 1px;width: 45%" />
+
+		<div  style="font-size: 13px;margin-bottom: 40px">
+		    <p>各类桌面设备（笔记本/台机）故障排除、安装及调试</p>
+			<p><span style="font-family: GOTHIC">Windows</span> 系统安装、恢复（含驱动、软件、上网调试）</p>
+			<p>系统病毒、木马查杀，网络故障诊断修复</p>
+			<p>网络服务器搭建及云存储、备份等</p>
+			<p>打印机、小型网络设备硬件故障诊断、设备安装调试</p>
+			<p><span style="font-family: GOTHIC">Windows</span> 域控服务器搭建、管理与维护</p>
+			<p>远程服务支持：<span style="font-family: GOTHIC">Teamview / TTVNC / Tencent QQ</span></p>
+			<p>门禁的考勤、室内监控等系统搭建</p>
+		</div>
+
+	</div>
+
+	<div class="footer" >
+		沪<span class="zftb">ICP</span>备<span class="zftb">1XXXXXXX</span>号<span class="zftb">-1 Copyright © 2018 </span>上海罗夏信息技术有限公司 - 保留所有权利
+	</div>
+</div>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6bf7ae9b5212b8c52b57065299f133f8";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</body>
+</html>
