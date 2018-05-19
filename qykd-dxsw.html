@@ -1,118 +1,117 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.3, maximum-scale=1.0" />
-        <title>速办网|FastKD.com</title>
-		<link rel="icon" href="./static/img/FastKD.ico"  size="128x128"   type="image/x-icon">
-		<link rel="stylesheet" type="text/css" href="./static/css/bootstrap.min.css"/>
-		<link rel="stylesheet" type="text/css" href="./static/css/main.css"/>		
-		<script type="text/javascript" src="./static/js/jquery.min.js"></script>		
-        <script type="text/javascript" src="./static/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="./static/js/respond.min.js"></script>		
-		<script type="text/javascript" src="./static/js/main.js"></script>		
-		
-		<script type="text/javascript">
-		$(function(){   
-			//产品链接
-			$("#system").on("click",function(){
-				window.location.href="http://cloud-open.cn/index.php?c=article&a=type&tid=409";
-			})	
-			$("#computer").on("click",function(){
-				window.location.href="http://cloud-open.cn/index.php?c=article&a=type&tid=433";
-			})	
-			$("#host").on("click",function(){
-				window.location.href="http://cloud-open.cn/yunzhuji/yzjpc.html";
-			})	
-			
-			//行点击事件
-		    $('#dxproduct').on('click-row.bs.table', function (e, row, element)   
-			{  
-				//$(element).css({"color":"blue","font-size":"16px;"});  				  
-			});  			
-		}); 
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.3, maximum-scale=1.0" />
+    <title>速办网&nbsp;|&nbsp;FastKD.COM</title>
+    <link rel="icon" href="static/img/FastKD.ico"   type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="./static/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="./static/css/main.css"/>
+	<script type="text/javascript" src="./static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="./static/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./static/js/respond.min.js"></script>
+	<script type="text/javascript" src="./static/js/main.js"></script>
 
-		</script>  
-		<style type="text/css">
-		    
-		</style>  		  
-    </head>
-    <body>
-		<div class="container-fluid">
-			<div class="head">
-				<ul>
-					<li><a href="home.html">首页</a></li>
-					<li><a href="huod.html" >活动专区</a></li>
-					<li><a href="wangl.html" >网络营销</a></li>
-					<li><a href="qiytx.html" style="background-color: #f2f2f2;" >企业通信</a></li>
-					<li><a href="itw.html">IT 外包</a></li>
-					<li><a href="xit.html">系统集成</a></li>
-					<li><a href="qiyy.html">企业云</a></li>
-					<li><a href="jiat.html">家庭宽带</a></li>
-					<li><a href="./about.html" >关于我们</a></li>
-                    <!---第0种-->
-					<div id="li_0" >
-						<li style="width: 11.5%" id="kong"><a style="background-color: #dcdddd"></a></li>
-						<li style="width: 3%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel"  onmousemove="over1('tel');this.style.cursor='hand'" onmouseout="out1('tel')"    >
-							<img width="100%" height="30px"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话.png"/>
-						</li>
-						<li style="width: 3%; padding:0px" id="email" onmousemove="over1('email')" onmouseout="out1('email')">
-							<img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱.png"/>
-						</li>		
-                    </div>					
-					
-					
-					<!---第一种--->
-					<div id="li_1" hidden >
-						<li style="width: 1%" id="kong"><a style="background-color: #dcdddd"></a></li>
-						<li style="width: 13.5%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel" onmousemove="over2('tel')" onmouseout="out2('tel')">
-							<a href=""><img width="100%"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话_.png"/></a>
-						</li>
-						<li style="width: 3%;     padding:0px" id="email" onmousemove="over('email')" onmouseout="out('email')">
-							<img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱.png"/>
-						</li>
-					</div>
-					
-					
-					<!---第二种--->
-					<div id="li_2" hidden>
-						<li style="width: 1%" id="kong"><a style="background-color: #dcdddd"></a></li>
-						<li style="width: 3%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel2" onmousemove="over3('tel2')" onmouseout="out3('tel2')">
-							<img width="100%"   height="30px"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话.png"/>
-						</li>
-						<li style="width: 13.5%;     padding:0px" id="email2" onmousemove="over('email2')" onmouseout="out3('email2')">
-							<a href=""><img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱_.png"/></a>
-					    </li>
-					</div>
-				</ul>
+	<script type="text/javascript">
+        $(function(){
+            //产品链接
+            $("#system").on("click",function(){
+                window.location.href="http://cloud-open.cn/index.php?c=article&a=type&tid=409";
+            })
+            $("#computer").on("click",function(){
+                window.location.href="http://cloud-open.cn/index.php?c=article&a=type&tid=433";
+            })
+            $("#host").on("click",function(){
+                window.location.href="http://cloud-open.cn/yunzhuji/yzjpc.html";
+            })
+
+            //行点击事件
+            $('#dxproduct').on('click-row.bs.table', function (e, row, element)
+            {
+            });
+        });
+
+	</script>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="head">
+		<ul>
+			<li><a href="home.html">首页</a></li>
+			<li><a href="huod.html" >活动专区</a></li>
+			<li><a href="wangl.html" >网络营销</a></li>
+			<li><a href="qiytx.html" style="background-color: #f2f2f2;" >企业通信</a></li>
+			<li><a href="itw.html">IT 外包</a></li>
+			<li><a href="xit.html">系统集成</a></li>
+			<li><a href="qiyy.html">企业云</a></li>
+			<li><a href="jiat.html">家庭宽带</a></li>
+			<li><a href="about.html" >关于我们</a></li>
+			<!---第0种-->
+			<div id="li_0" >
+				<li style="width: 11.5%" id="kong"><a style="background-color: #dcdddd"></a></li>
+				<li style="width: 3%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel"  onmousemove="over1('tel');this.style.cursor='hand'" onmouseout="out1('tel')"    >
+					<img width="100%" height="30px"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话.png"/>
+				</li>
+				<li style="width: 3%; padding:0px" id="email" onmousemove="over1('email')" onmouseout="out1('email')">
+					<img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱.png"/>
+				</li>		
+			</div>					
+			
+			
+			<!---第一种--->
+			<div id="li_1" hidden >
+				<li style="width: 1%" id="kong"><a style="background-color: #dcdddd"></a></li>
+				<li style="width: 13.5%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel" onmousemove="over2('tel')" onmouseout="out2('tel')">
+					<a href=""><img width="100%"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话_.png"/></a>
+				</li>
+				<li style="width: 3%;     padding:0px" id="email" onmousemove="over('email')" onmouseout="out('email')">
+					<img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱.png"/>
+				</li>
 			</div>
-			<div  class="main">
-			    <div style="padding-top:20px;"  class="headerx" >
-					<table border="0px">
-						<tr>
-							<td width="190px" style="vertical-align:bottom">
-								<img width="100%" src="./static/img/web/kdsuban/LOGO.png" />
-							</td>
-							<td style="width:50px"></td>
-							<div  class="secmenu" style="margin-top: 8px">
-								<td><span style="padding-bottom:10px; border-bottom:1px solid #000;color: #A40B5D">&nbsp;&nbsp;企业宽带&nbsp;&nbsp;</span></td>
-								<td><a href="hangy.html">&nbsp;&nbsp;行业专属&nbsp;&nbsp;</a></td>
-								<td><a href="yuy.html">&nbsp;&nbsp;语音业务&nbsp;&nbsp;</a> </td>
-								<td><a href="ziyuancx.html">&nbsp;&nbsp;资源查询&nbsp;&nbsp;</a></td>
-								<td><a href="subanlc.html">&nbsp;&nbsp;速办流程&nbsp;&nbsp;</a></td>
-							</div>
-							<td style="width:60px"></td>
-							<td width="200px" style="vertical-align:bottom">	
-								<div class="search" style=""  >
-									<input type="text" name="fname"  style="border:none;width: 160px"/>
-									<img  src="./static/img/web/kdsuban/搜索_放大镜.png" /><br/>
-									<hr style="background-color:#000000;height: 1.5px;width: 180px;padding-bottom:0px;margin-bottom:0px;margin-top:0px" />
-								</div> 
-							</td>
-						</tr>
-					</table>
-				</div>				
+			
+			
+			<!---第二种--->
+			<div id="li_2" hidden>
+				<li style="width: 1%" id="kong"><a style="background-color: #dcdddd"></a></li>
+				<li style="width: 3%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel2" onmousemove="over3('tel2')" onmouseout="out3('tel2')">
+					<img width="100%"   height="30px"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话.png"/>
+				</li>
+				<li style="width: 13.5%;     padding:0px" id="email2" onmousemove="over('email2')" onmouseout="out3('email2')">
+					<a href=""><img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱_.png"/></a>
+				</li>
+			</div>
+		</ul>
+	</div>
+		<div  class="main">
+			<div class="headerx" >
+				<table border="0px">
+					<tr>
+						<td width="190px" style="vertical-align:bottom">
+							<img width="100%" src="./static/img/web/kdsuban/LOGO.png" />
+						</td>
+						<td style="width:50px"></td>
+						
+						<td><span style="padding-bottom:10px; border-bottom:1px solid #000;color: #A40B5D">&nbsp;&nbsp;企业宽带&nbsp;&nbsp;</span></td>
+						<td><div  class="secmenu" ><a href="hangy.html">&nbsp;&nbsp;行业专属&nbsp;&nbsp;</a></div></td>
+						<td><div  class="secmenu" ><a href="yuy.html">&nbsp;&nbsp;语音业务&nbsp;&nbsp;</a></div></td>
+						<td><div  class="secmenu" ><a href="ziyuancx.html">&nbsp;&nbsp;资源查询&nbsp;&nbsp;</a></div></td>
+						<td><div  class="secmenu" ><a href="subanlc.html">&nbsp;&nbsp;速办流程&nbsp;&nbsp;</a></div></td>
+						
+						<td style="width:60px"></td>
+						<td width="200px" style="vertical-align:bottom">	
+							<div class="search" style=""  >
+								<input type="text" name="fname"  style="border:none;width: 160px"/>
+								<img  src="./static/img/web/kdsuban/搜索_放大镜.png" /><br/>
+								<hr style="background-color:#000000;height: 1.5px;width: 180px;padding-bottom:0px;margin-bottom:0px;margin-top:0px" />
+							</div> 
+						</td>
+					</tr>
+				</table>
+			</div>				
 			<!--
 				<div class="headerx" >
 					<div style="float:left;padding: 0px;margin: 0px;text-align: left;width: 21%">
@@ -134,7 +133,7 @@
 				</div>
 			-->
 				<div class="ptitle" style="display: none">小微商企、<span style="color: #F90000">必备</span>首选！</div>
-				<table width="100%" border="0px" style="margin-top: 65px;margin-bottom: 30px" >
+		        <table  class="menubtn"  >
 					<tr>
 						<td width="4%"></td>
 						<td>
