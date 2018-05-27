@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.3, maximum-scale=1.0" />
+    <title>速办网&nbsp;|&nbsp;FastKD.COM</title>
+    <link rel="icon" href="static/img/FastKD.ico"   type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="./static/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="./static/css/main.css"/>
+	<script type="text/javascript" src="./static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="./static/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./static/js/respond.min.js"></script>
+	<script type="text/javascript" src="./static/js/main.js"></script>
+
+	<script type="text/javascript">
+        $(function(){
+            //产品链接
+            $("#system").on("click",function(){
+                window.location.href="http://cloud-open.cn/index.php?c=article&a=type&tid=409";
+            })
+            $("#computer").on("click",function(){
+                window.location.href="http://cloud-open.cn/index.php?c=article&a=type&tid=433";
+            })
+            $("#host").on("click",function(){
+                window.location.href="http://cloud-open.cn/yunzhuji/yzjpc.html";
+            })
+
+            //行点击事件
+            $('#dxproduct').on('click-row.bs.table', function (e, row, element)
+            {
+            });
+        });
+
+	</script>
+	<style type="text/css">
+		.tdlist{
+			padding:10px 20px;
+		};
+	</style>
+</head>
+    <body>
+		<div class="container-fluid">
+			<div class="head">
+				<ul>
+					<li><a href="home.html" >首页</a></li>
+					<li><a href="huod.html" >活动专区</a></li>
+					<li><a href="wangl.html" >网络营销</a></li>
+					<li><a href="qiytx.html" style="background-color: #f2f2f2;" >企业通信</a></li>
+					<li><a href="itw.html">IT 外包</a></li>
+					<li><a href="xit.html">系统集成</a></li>
+					<li><a href="qiyy.html">企业云</a></li>
+					<li><a href="jiat.html">家庭宽带</a></li>
+					<li><a href="about.html">关于我们</a></li>
+					<!---第0种-->
+					<div id="li_0" >
+						<li style="width: 11.5%" id="kong"><a style="background-color: #dcdddd"></a></li>
+						<li style="width: 3%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel"  onmousemove="over1('tel');this.style.cursor='hand'" onmouseout="out1('tel')"    >
+							<img width="100%" height="30px"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话.png"/>
+						</li>
+						<li style="width: 3%; padding:0px" id="email" onmousemove="over1('email')" onmouseout="out1('email')">
+							<img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱.png"/>
+						</li>		
+                    </div>					
+					
+					
+					<!---第一种--->
+					<div id="li_1" hidden >
+						<li style="width: 1%" id="kong"><a style="background-color: #dcdddd"></a></li>
+						<li style="width: 13.5%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel" onmousemove="over2('tel')" onmouseout="out2('tel')">
+							<a href="" style="margin-top:0px"><img width="100%"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话_.png"/></a>
+						</li>
+						<li style="width: 3%;     padding:0px" id="email" onmousemove="over('email')" onmouseout="out('email')">
+							<img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱.png"/>
+						</li>
+					</div>
+					
+					
+					<!---第二种--->
+					<div id="li_2" hidden>
+						<li style="width: 1%" id="kong"><a style="background-color: #dcdddd"></a></li>
+						<li style="width: 3%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel2" onmousemove="over3('tel2')" onmouseout="out3('tel2')">
+							<img width="100%"   height="30px"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话.png"/>
+						</li>
+						<li style="width: 13.5%;     padding:0px" id="email2" onmousemove="over('email2')" onmouseout="out3('email2')">
+							<a href="" style="margin-top:0px"><img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱_.png"/></a>
+					    </li>
+					</div>
+				</ul>
+			</div>				
+			<div  class="main"> 
+				<div class="headerx" >
+					<table border="0px">
+						<tr>
+							<td width="190px" style="vertical-align:bottom">
+								<img width="100%" src="./static/img/web/kdsuban/LOGO.png" />
+							</td>
+							<td style="width:50px"></td>
+							
+							<td><div  class="secmenu" ><a href="qiytx.html">&nbsp;&nbsp;企业宽带&nbsp;&nbsp;</a></div></td>
+							<td><span style="padding-bottom:10px; border-bottom:1px solid #000;color: #A40B5D">&nbsp;&nbsp;行业专属&nbsp;&nbsp;</span></td>
+							<td><div  class="secmenu" ><a href="yuy.html">&nbsp;&nbsp;语音业务&nbsp;&nbsp;</a></div></td>
+							<td><div  class="secmenu" ><a href="ziyuancx.html">&nbsp;&nbsp;资源查询&nbsp;&nbsp;</a></div></td>
+							<td><div  class="secmenu" ><a href="subanlc.html">&nbsp;&nbsp;速办流程&nbsp;&nbsp;</a></div></td>
+							<td style="width:60px"></td>
+							<td width="200px" style="vertical-align:bottom">	
+								<div class="search" style=""  >
+									<input type="text" name="fname"  style="border:none;width: 160px"/>
+									<img  src="./static/img/web/kdsuban/搜索_放大镜.png" /><br/>
+									<hr style="background-color:#000000;height: 1.5px;width: 180px;padding-bottom:0px;margin-bottom:0px;margin-top:0px" />
+								</div> 
+							</td>
+						</tr>
+					</table>
+				</div>	
+			</div>	
+			<table class="menubtn"  >
+				<tr>
+					<td width="26%"></td>
+					<td>
+						<a href="./zscp-gykd.html">
+							<img width="100%"  src="./static/img/web/qykd/三级菜单_数据专线_.png"
+								 onmouseover="this.src='./static/img/web/qykd/三级菜单_数据专线.png'"
+								 onmouseout="this.src='./static/img/web/qykd/三级菜单_数据专线_.png'">
+						</a>						
+					</td>
+					<td width="1%"></td>
+					<td>
+						<a href="./zscp-hzkd.html">
+							<img  width="100%" src="./static/img/web/qykd/三级菜单_会展宽带_.png"
+								  onmouseover="this.src='./static/img/web/qykd/三级菜单_会展宽带.png'"
+								  onmouseout="this.src='./static/img/web/qykd/三级菜单_会展宽带_.png'">
+						</a>
+					</td>
+					<td width="1%"></td>
+					<td>
+						<a href="#"><img width="100%"  src="./static/img/web/qykd/三级菜单_公寓宽带.png">
+	
+					</td>					
+					<td width="1%"></td>
+					<td>
+						<a href="./zscp-hwyh.html">
+							<img width="100%"  src="./static/img/web/qykd/三级菜单_海外优化_.png"
+								 onmouseover="this.src='./static/img/web/qykd/三级菜单_海外优化.png'"
+								 onmouseout="this.src='./static/img/web/qykd/三级菜单_海外优化_.png'">
+						</a>
+					</td>
+					<td width="26%"></td>
+				</tr>
+			</table>
+			<div style="width:100%;height:215px;padding:0px;background:url('./static/img/web/gongyukd/Banner_公寓宽带.jpg') no-repeat 0px 0px;background-size:100% 96%;">
+				
+			</div>
+             
+	        <div class="main"> 
+				<div style="font-size:30px;margin-top:30px;margin-bottom:10px">速办网为公寓经营者提供<span style="color:#A40B5D">宽带全托管服务</span></div>
+				<div style="border:2px solid #A40B5D;padding:8px 18px;background-color:#EFEFEF;text-align:left">
+					<p style="font-size:20px;padding-top:4px;line-height:38px">
+						速办网专注于住房租住人群的上网需求，服务于租户和公寓经营者两端，致力于与公寓经营者一起为租户打造智能化租住的便捷、高质量生活。<br/>
+						为解决公寓宽带管理混乱、运营繁琐、投入成本高等问题，速办网提供上网宽带全托管服务，帮助公寓方游刃有余地经营宽带业务。
+					</p>
+				</div>	
+				<div>
+					<p>
+					    <br/><br/>
+						<img style="width:260px" src="./static/img/web/gongyukd/节省采购成本.png"/>
+						<br/><br/>
+						<img style="width:20px" src="./static/img/web/gongyukd/箭头.png"/>
+						<br/>
+						<p style="line-height:30px;font-size:18px;margin-top:16px;">
+							速办网和国内所有一级运营商、主流民营运营商有高度的合作关系，可根据用户需求推荐最合适的宽带产品。<br/>
+							我们拥有足够的宽带采购量保证速办网在与运营商洽谈时有较强的议价能力，将更多优惠带给客户。<br/>
+							客户在运营商处可用企业名开户，办理家庭宽带，大大节省带宽采购成本。						
+						</p>
+					</p>
+					<p>
+					    <br/><br/>
+						<img style="width:260px" src="./static/img/web/gongyukd/专享服务保障.png"/>
+						<br/><br/>
+						<img style="width:20px" src="./static/img/web/gongyukd/箭头.png"/>
+						<br/>
+						<p style="line-height:30px;font-size:18px;margin-top:16px;">
+							速办网与运营商签署保障优先服务协议，确保宽带安装时限。<br/>
+							我们可定制装机规范，例如指定宽带安装时间、路由器安装位置、路由器配置参数等。<br/>
+							遇特殊情况可加急安装开通，绝不耽误租户入住使用宽带						
+						</p>
+					</p>
+					<p>
+					    <br/><br/>
+						<img style="width:260px" src="./static/img/web/gongyukd/全方位专属服务.png"/>
+						<br/><br/>
+						<img style="width:20px" src="./static/img/web/gongyukd/箭头.png"/>
+						<br/>
+						<p style="line-height:30px;font-size:18px;margin-top:16px;">
+							速办网为客户配置了全方位专属的客服及实施团队。<br/>
+							提供协调装机进度、管理宽带资料、处理报修投诉、到期续费撤机等一条龙全套服务。<br/>
+							全国统一客户服务标准，提供7×24小时不间断工作时间						
+						</p>
+					</p>
+					<p>
+					    <br/><br/>
+						<img style="width:260px" src="./static/img/web/gongyukd/专业技术人员.png"/>
+						<br/><br/>
+						<img style="width:20px" src="./static/img/web/gongyukd/箭头.png"/>
+						<br/>
+						<p style="line-height:30px;font-size:18px;margin-top:16px;">
+							速办网经验丰富的技术人员可根据房型为客户定制 Wi-Fi 覆盖方案。<br/>
+							维修无死角，无论是宽带故障还是路由器故障，各种疑难问题，专业维修人员24小时内上门排除。					
+						</p>
+					</p>	
+					<p>
+					    <br/><br/>
+						<img style="width:260px" src="./static/img/web/gongyukd/严格保密用户数据.png"/>
+						<br/><br/>
+						<img style="width:20px" src="./static/img/web/gongyukd/箭头.png"/>
+						<br/>
+						<p style="line-height:30px;font-size:18px;margin-top:16px;">
+							所有接触用户数据的员工均已签署保密协议。<br/>
+							细分员工的系统操作权限。<br/>
+							各用户数据在管理系统中相互隔离。					
+						</p>
+					</p>					
+				</div>
+				<div style="margin:20px 2px">
+					<a href="skype:+864008207778?call"> <img width="300px" src="./static/img/web/gongyukd/深入了解.png"></a>
+				</div>
+				<hr style="margin-top:5px;background-color:#727171;height: 1.5px;width:90%" />
+				<div style="font-size:30px;margin-top:35px;margin-bottom:10px">
+						<p style="font-size:36px;line-height:45px">
+							 我们提供的服务标准<br/>
+							<span style="font-family: GOTHIC;color:#A40B5D;font-size:37px">SERVICE CONTENT</span>
+	                    </p> 
+						<table  class="table table-condensed producttable " style="text-align: left;margin-top: 20px;font-size: 14px">
+							<thead>
+								<th width="22%">项目</th>
+								<th width="42%">服务内容</th>
+								<th width="46%">服务承诺及质量</th>
+							</thead>
+							<tr style="">
+								<td  style="text-align:center;vertical-align: middle;">运营商宽带采购</td>
+								<td style="padding:10px 16px;vertical-align: middle;">
+									<p style="line-height: 30px">
+										包括但不限于：电信、联通、移动、鹏博士、歌华有线、方正、等六家主流宽带运营商（不同区域会有所区别），代收宽带网络使用费。
+									</p>
+								</td>
+								<td style="padding:10px 16px;vertical-align: middle;">
+									<p style="line-height: 30px">
+										按照宽带运营商承诺服务标准，详见《运营商时效、资费表》。
+									</p>	
+								</td>
+							</tr>
+							<tr style="">
+								<td  style="text-align:center;vertical-align: middle;">宽带托管基础服务</td>
+								<td style="padding:10px 16px;vertical-align: middle;">
+									<p style="line-height: 30px">
+										1、完成宽带安装，同时完成用户路由器的安装与调测；<br/>
+										2、提供宽带查询、到期提醒、续费、撤机等业务办理；<br/>
+										3、提供宽带管理系统及相应手机客户端、支持在线服务；<br/>
+										4、当天下午15:00之后收到的报装工单，视为次日受理。
+									</p>
+								</td>
+								<td style="padding:10px 16px;vertical-align: middle;">
+									<p style="line-height: 30px">
+										1、按运营商规定时限内装机完成率≥95%（月度指标，各运营商承诺时限有所不同）；<br/>
+										2、安装过程，客户零配合；<br/>
+										3、提供全国统一报装、咨询服务；<br/>
+										4、客服工作时间7×16小时（8:00-24:00）。
+									</p>	
+								</td>
+							</tr>	
+							<tr style="">
+								<td  style="text-align:center;vertical-align: middle;">宽带安装加急服务<br/>（限指定运营商）</td>
+								<td style="padding:10px 16px;vertical-align: middle;">
+									<p style="line-height: 30px">
+										1、报单后工作时间4小时内完成装机；<br/>
+										2、安装加急工作时间为9:00-16:30。
+									</p>
+								</td>
+								<td style="padding:10px 16px;vertical-align: middle;">
+									<p style="line-height: 30px">
+										报单后工作时间4小时内完成装机。
+									</p>	
+								</td>
+							</tr>														
+		                    <tr style="">
+								<td  style="text-align:center;vertical-align: middle;">
+									宽带维修托管<br/>
+									基础服务
+								</td>
+								<td style="padding:10px 16px;vertical-align: middle;">
+									<p style="line-height: 30px">
+										1、全国统一400客服电话（或邮件）受理用户宽带报修；<br/>
+										2、在线远程故障诊断；<br/>
+										3、代向运营商进行宽带报修；<br/>
+										4、跟踪、督促维修或安装进度；<br/>
+										5、代甲方对租户进行满意度回访；<br/>
+										6、赠送远程指导用户自检、自修；<br/>
+										7、维修托管服务分析月度报告（宽托管量＞1000条）。
+									</p>
+								</td>
+								<td style="padding:10px 16px;vertical-align: middle;">
+									<p style="line-height: 30px">
+										1、400电话客服工作时间7×16小时（8:00-24:00）；<br/>
+										2、公寓经营方通过电话、邮件报修，响应时间为10分钟内，30分钟内致电用户。
+									</p>	
+								</td>
+							</tr>	
+							<tr style="">
+								<td  style="text-align:center;vertical-align: middle;">
+									宽带维修托管<br/>
+									升级服务<br/>
+									（限指定地区）</td>
+								<td style="padding:10px 16px;vertical-align: middle;">
+									<p style="line-height: 30px">
+										1、可接管用户电脑对路由器进行优化配置；<br/>
+										2、路由器故障上门检修、更换、配置参数调优；<br/>
+										3、上门全屋 Wi-Fi 覆盖优化；<br/>
+										4、维修工程师上门工作时间为9:00-21:00；<br/>
+										5、接到用户报修后，24小时内上门维修。
+									</p>
+								</td>
+								<td style="padding:10px 16px;vertical-align: middle;">
+									<p style="line-height: 30px">
+										1、月有效投诉率≤0.1%（投诉率=当月投诉量/上月底的存量宽带总数）；<br/>
+										2、故障修复率≥95%；<br/>
+										3、速办网技术工程师24小时内上门维修。
+									</p>	
+								</td>
+							</tr>	
+							<tr style="">
+								<td  style="text-align:center;vertical-align: middle;">宽带单次维修服务<br/>（限指定地区）</td>
+								<td style="padding:10px 16px;vertical-align: middle;">
+									<p style="line-height: 30px">
+										1、全国统一400客服电话（或邮件）受理用户宽带报修；<br/>
+										2、在线远程故障诊断；<br/>
+										3、代向运营商进行宽带报修；<br/>
+										4、跟踪、督促维修或安装进度；<br/>
+										5、代甲方对租户进行满意度回访；<br/>
+										6、远程指导用户自检、自修；<br/>
+										7、解决问题：非运营商故障的宽带断网、网速慢、无线网络信号弱；<br/>
+										8、路由器检修、更换、Wi-Fi 优化。
+									</p>
+								</td>
+								<td style="padding:10px 16px;vertical-align: middle;">
+									<p style="line-height: 30px">
+										1、同一故障多次上门维修，上门服务费及技术服务费不重复计算，但涉及设备材料费按实际发生计算；<br/>
+										2、速办网技术工程师24小时内上门维修。
+									</p>	
+								</td>
+							</tr>														
+		                    <tr style="">
+								<td  style="text-align:center;vertical-align: middle;">小速路由器SR100<br/>（低配版）</td>
+								<td style="padding:10px 16px;vertical-align: middle;">
+									<p style="line-height: 30px">
+										1、客户指定专人负责小速路由器的故障报修；<br/>
+										2、路由器远程重启、配置参数调优。										
+									</p>
+								</td>
+								<td style="padding:10px 16px;vertical-align: middle;">
+									<p style="line-height: 30px">
+										1、稳定带机量23台；<br/>
+										2、满足10人合租环境的上网需求；<br/>
+										3、覆盖140㎡左右及以下的空间需求。										
+									</p>	
+								</td>
+							</tr>
+							<tr style="">
+								<td  style="text-align:center;vertical-align: middle;">小速路由器SR110<br/>（高配版）</td>
+								<td style="padding:10px 16px;vertical-align: middle;">
+									<p style="line-height: 30px">
+										1、客户指定专人负责小速路由器的故障报修；<br/>
+										2、路由器远程重启、配置参数调优。										
+									</p>
+								</td>
+								<td style="padding:10px 16px;vertical-align: middle;">
+									<p style="line-height: 30px">
+										1、稳定带机量30台；<br/>
+										2、满足15人合租环境的上网需求；<br/>
+										3、覆盖140㎡左右及以上的空间需求。
+									</p>	
+								</td>
+							</tr>															
+						</table>
+					<div>
+						<hr style="height:1px;border-width:0;color:gray;background-color:#bfc0c0;margin-top:3px"; />
+					</div>						
+				</div>
+			</div>
+
+			 <div style="margin:20px 0px;font-size: 23px;">
+					<a href="skype:+8602131262710?call"><img width="20%" style="margin-top: 10px" src="./static/img/web/huizhankd/电话_免费咨询.png"></a>
+			</div>
+			</div>
+			<div class="footer">
+				沪<span class="zftb">ICP</span>备<span class="zftb">18019641</span>号<span class="zftb">-1 Copyright © 2018 </span>上海罗夏信息技术有限公司 - 保留所有权利
+			</div>       		
+		<script>
+		var _hmt = _hmt || [];
+		(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?6bf7ae9b5212b8c52b57065299f133f8";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+		})();
+		</script>		
+    </body>
+</html>
