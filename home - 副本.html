@@ -158,33 +158,7 @@
 				settime(obj) }
 				,1000) 
 		}	
-		</script>
-
-		<script type="text/javascript">
-			var curIndex=0;
-			//时间间隔(单位毫秒)，每秒钟显示一张，数组共有5张图片放在Photos文件夹下。
-			var timeInterval=3000;
-			var arr=new Array();
-			arr[0]="./static/img/web/huod/Banner_电信1元活动.jpg";
-			arr[1]="./static/img/web/home/banner.png";
-			setInterval(changeImg,timeInterval);
-			function changeImg()
-			{
-				var obj=document.getElementById("banner");
-				if (curIndex==arr.length-1)
-				{
-					curIndex=0;
-					obj.rel="0";
-				}
-				else
-				{
-					curIndex+=1;
-					obj.rel="1";
-				}
-				obj.src=arr[curIndex];
-			}
-
-		</script>
+		</script>  
 				
 		<style type="text/css">
 	        input{
@@ -227,7 +201,7 @@
 					<li><a href="about.html">关于我们</a></li>
 					<!---第0种-->
 					<div id="li_0" >
-						<li style="width: 11.5%" id="kong"><a style="background-color: #dcdddd;font-family:GOTHIC">400-820-7778</a></li>
+						<li style="width: 11.5%" id="kong"><a style="background-color: #dcdddd">400-820-7778</a></li>
 
 						<li style="width: 3%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel"  onmousemove="over1('tel');this.style.cursor='hand'" onmouseout="out1('tel')"    >
 							<img width="100%" height="30px"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话.png"/>
@@ -296,11 +270,7 @@
 				
 			<div class="ptitle">发展的真正意义在于<span style="color:#b20059;">高效</span>和<span style="color:#b20059;">务实</span>，速办网<span style="color:#b20059;">助力</span>速达！</div>
 			<img width="100%" src="static/img/web/home/Banner.jpg" style="display: none">
-			
-			<div style="width:100%;height:215px;padding:0px;">
-				<img  id="banner" width="100%"  src="./static/img/web/home/banner.png"  onclick="linkyyz()" >
-			</div>				
-<!-- 			<div style="width:100%;height:220px;padding:0px;background:url('./static/img/web/home/banner.png') no-repeat 0px 0px;background-size:cover"
+			<div style="width:100%;height:220px;padding:0px;background:url('./static/img/web/home/banner.png') no-repeat 0px 0px;background-size:cover"
 				 onmousemove="telover()" onmouseout="telout()" onclick="linkyyz()">
 				<div style="padding-top:55px" >
 					<table width="100%" border="0px">
@@ -324,7 +294,7 @@
 						</tr>
 					</table>
 				</div>
-			</div> -->
+			</div>
 
 			<div class="ptitle">从申请到使用，仅<span style="color:#b20059;font-family:GOTHIC">25</span>小时！</div>
 
