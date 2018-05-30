@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.3, maximum-scale=1.0" />
+    <title>速办网&nbsp;|&nbsp;FastKD.COM</title>
+    <link rel="icon" href="static/img/FastKD.ico"   type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="./static/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="./static/css/main.css"/>
+	<script type="text/javascript" src="./static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="./static/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./static/js/respond.min.js"></script>
+	<script type="text/javascript" src="./static/js/main.js"></script>
+
+	<script type="text/javascript">
+        $(function(){
+            //产品链接
+            $("#system").on("click",function(){
+                window.location.href="http://cloud-open.cn/index.php?c=article&a=type&tid=409";
+            })
+            $("#computer").on("click",function(){
+                window.location.href="http://cloud-open.cn/index.php?c=article&a=type&tid=433";
+            })
+            $("#host").on("click",function(){
+                window.location.href="http://cloud-open.cn/yunzhuji/yzjpc.html";
+            })
+
+            //行点击事件
+            $('#dxproduct').on('click-row.bs.table', function (e, row, element)
+            {
+            });
+        });
+		function submitNeed()
+		{
+			var clientdata = {};
+			clientdata['city'] = $('#city').find("option:selected").text();
+			clientdata['country'] =  $('#country').find("option:selected").text();
+			clientdata['addr'] =  $('#addr').val();;
+			clientdata['contactname'] =  $('#contactname').val();;
+			clientdata['contactmobile'] =  $('#contactmobile').val();
+			clientdata['page'] =  $('#page').val();;
+			clientdata['from'] =  $('#from').val();;
+
+
+			var  clientdata = JSON.stringify(clientdata);
+			console.info(clientdata);
+			$.ajax({
+			//几个参数需要注意一下
+				type: "POST",//方法类型
+				url: "http://www.cloud-open.cn/client.php?c=feedback&a=pushClientNeed" ,//url
+				data: {'ctd':clientdata},
+				success: function (result) {
+					alert("提交成功，敬请等待客服联系！");
+				},
+				error : function() {
+					alert("异常！");
+				}
+			});		
+		}
+		function getStrLength(str) 
+		{
+			var cArr = str.match(/[^\x00-\xff]/ig);
+			return str.length + (cArr == null ? 0 : cArr.length);
+		}		
+		
+		var countdown=60; 
+		function settime(obj) 
+		{ 
+			if (countdown == 0) 
+			{ 
+				obj.removeAttribute("disabled");    
+				obj.value="免费获取验证码"; 
+				countdown = 60; 
+				return;
+			} else { 
+				obj.setAttribute("disabled", true); 
+				obj.value="重新发送(" + countdown + ")"; 
+				countdown--; 
+			} 
+			setTimeout(function() { 
+				settime(obj) }
+				,1000) 
+		}
+		function getMobileCode(obj) 
+		{     
+			var mobile = $('#contactmobile').val();
+			if(getStrLength(mobile)!=11)
+			{
+				alert("请输入正常的手机号码");
+				return false;
+			}
+			$.ajax({
+			//几个参数需要注意一下
+				type: "POST",//方法类型
+				url: "http://www.cloud-open.cn/client.php?c=feedback&a=getVerifyCode",//url
+				data: {'mobile':mobile},
+				success: function (result) {
+					alert(result);
+				},
+				error : function() {
+					alert("异常！");
+				}
+			});	
+			
+			if (countdown == 0) { 
+				obj.removeAttribute("disabled");    
+				obj.value="免费获取验证码"; 
+				countdown = 60; 
+				return;
+			} else { 
+				obj.setAttribute("disabled", true); 
+				obj.value="重新发送(" + countdown + ")"; 
+				countdown--; 
+			} 
+			setTimeout(function() { 
+				settime(obj) }
+				,1000) 
+		}			
+	</script>
+	<style type="text/css">
+		input{
+			height:20px;
+		}
+		select{		
+			width:120px;
+			height:22px;
+			appearance:none;
+			-moz-appearance:none;
+			-webkit-appearance:none;
+			background: url("./static/img/web/zycx/表单_下拉箭头.png") no-repeat scroll right  transparent;
+			background-size: 12px 8px;
+			background-position: right 4px top 6px;
+			-webkit-appearance: none;
+			border-radius: 0;			
+		}
+		select::-ms-expand { display: none; }
+		option{
+			text-align: center;
+		}
+
+	</style>  
+</head>
+    <body>
+		<div class="container-fluid">
+			<div class="head">
+				<ul>
+					<li><a href="home.html">首页</a></li>
+					<li><a href="huod.html" >活动专区</a></li>
+					<li><a href="wangl.html" >整合营销</a></li>
+					<li><a href="qiytx.html" style="background-color: #f2f2f2;" >企业通信</a></li>
+					<li><a href="itw.html">IT 外包</a></li>
+					<li><a href="xit.html">系统集成</a></li>
+					<li><a href="qiyy.html">企业云</a></li>
+					<!--
+					<li><a href="jiat.html">家庭宽带</a></li>
+					-->
+					<li><a href="qyjz.html">企业建站</a></li>
+					<li><a href="about.html">关于我们</a></li>
+					<!---第0种-->
+					<div id="li_0" >
+						<li style="width: 11.5%" id="kong"><a style="background-color: #dcdddd"></a></li>
+						<li style="width: 3%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel"  onmousemove="over1('tel');this.style.cursor='hand'" onmouseout="out1('tel')"    >
+							<img width="100%" height="30px"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话.png"/>
+						</li>
+						<li style="width: 3%; padding:0px" id="email" onmousemove="over1('email')" onmouseout="out1('email')">
+							<img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱.png"/>
+						</li>		
+                    </div>					
+					
+					
+					<!---第一种--->
+					<div id="li_1" hidden >
+						<li style="width: 1%" id="kong"><a style="background-color: #dcdddd"></a></li>
+						<li style="width: 13.5%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel" onmousemove="over2('tel')" onmouseout="out2('tel')">
+							<a href="" style="margin-top:0px"><img width="100%"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话_.png"/></a>
+						</li>
+						<li style="width: 3%;     padding:0px" id="email" onmousemove="over('email')" onmouseout="out('email')">
+							<img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱.png"/>
+						</li>
+					</div>
+					
+					
+					<!---第二种--->
+					<div id="li_2" hidden>
+						<li style="width: 1%" id="kong"><a style="background-color: #dcdddd"></a></li>
+						<li style="width: 3%;display: inline;float: left;background:red;margin-top:0px;padding-top:0px" id="tel2" onmousemove="over3('tel2')" onmouseout="out3('tel2')">
+							<img width="100%"   height="30px"  style="margin-top:0px" id="navtel"  src="./static/img/web/home/导航_电话.png"/>
+						</li>
+						<li style="width: 13.5%;     padding:0px" id="email2" onmousemove="over('email2')" onmouseout="out3('email2')">
+							<a href="" style="margin-top:0px"><img width="100%" height="30px"  id="navmail"   src="./static/img/web/home/导航_邮箱_.png"/></a>
+					    </li>
+					</div>
+				</ul>
+			</div>				
+			<div  class="main"> 
+				<div class="headerx" >
+					<table border="0px">
+						<tr>
+							<td width="190px" style="vertical-align:bottom">
+								<img width="100%" src="./static/img/web/kdsuban/LOGO.png" />
+							</td>
+							<td style="width:30px"></td>
+							
+							<td><span style="padding-bottom:10px; border-bottom:1px solid #000;color: #A40B5D"> 企业宽带 </span></td>
+							<td><div  class="secmenu" ><a href="sem-hangy.html"> 行业专属 </a></div></td>
+
+							<td><div  class="secmenu" ><a href="sem-yuy.html"> 语音业务 </a></div></td>
+							<td><div  class="secmenu" ><a href="sem-ziyuancx.html"> 资源查询 </a></div></td>
+							<td><div  class="secmenu" ><a href="sem-subanlc.html"> 速办流程 </a></div></td>
+							<td style="width:40px"></td>
+							<td width="200px" style="vertical-align:bottom">	
+								<div class="search" style=""  >
+									<input type="text" name="fname"  style="border:none;width: 160px"/>
+									<img  src="./static/img/web/kdsuban/搜索_放大镜.png" /><br/>
+									<hr style="background-color:#000000;height: 1.5px;width: 180px;padding-bottom:0px;margin-bottom:0px;margin-top:0px" />
+								</div> 
+							</td>
+						</tr>
+					</table>
+				</div>	
+				<div class="ptitle" ><span style="color:#A40B5D">效率</span>和<span style="color:#A40B5D">成本控制</span>是企业的生命线！</div>			
+			</div>	
+
+			<div style="width:100%;height:215px;padding:0px;margin-bottom:40px">
+				<img  id="banner" width="100%"  src="./static/img/web/semqykd/Banner_企业宽带.jpg"" >
+			</div>						
+			<!--
+			<div style="width:100%;height:215px;padding:0px;background:url('./static/img/web/semsjzx/Banner_数据专线.jpg') no-repeat 0px 0px;background-size:100% 96%;">
+				6666666666
+			</div>
+             -->
+	        <div class="main"> 
+				<div>
+					<div style="text-align:left;">
+						<div style="margin-bottom:20px">
+							<table>
+								<tr>
+									<td style="width:20%"><img width="90%"  src="./static/img/web/semqykd/LOGO_中国电信.png"></td>
+									<td style="font-size:40px;">电信企业宽带 <span style="font-family:GOTHIC">CHINA TELECOM</span></td>
+								</tr>
+							</table>
+						</div>	
+					
+					</div>
+					<table  class="table table-condensed producttable " style="text-align: center;margin-top: 20px;font-size: 18px">
+						 <thead>
+							<th  style="background-color:#484D52;width:120px"><img width="100%"  src="./static/img/web/semqykd/销量冠军.png"></th>
+							<th  style="background-color:#484D52;color:#FFFFFF">产品名称</th>
+							<th  style="background-color:#484D52;color:#FFFFFF">适&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用</th>
+							<th style="background-color:#484D52;color:#FFFFFF">配&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;置</th>
+							<th style="background-color:#484D52;color:#FFFFFF">价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</th>
+						</thead>
+						<tbody class="zftb">
+							<tr >
+								<td style="BORDER-RIGHT: #ffffff 2px solid; background-color:#EFEBFA;" rowspan="4">
+									<span style="font-size:20px;color:#A5359B">速办享豪礼</span><br/>
+									<span style="font-size:10px;color:red">云主机/免费云固话</span><br/>
+									<span style="font-size:10px;">点击这里了解详情</span><br/>
+									<span style="font-size:10px;">或者免费电话咨询</span><br/>
+									<span style="font-size:10px;">400-820-7778</span>
+								</td>
+								<td>旺铺通</td>
+								<td>商铺、初创企业类用户</td>
+								<td>下行<span style="font-family:GOTHIC">50M</span>/上行4M，动态IP</td>
+								<td><span style="color:red;font-family:GOTHIC">158</span>元/月</td>
+							</tr>
+							<tr style="background-color:#EFEBFA">
+								<td>商务专线 / <span style="color:#A5359B">限时0元享</span></td>
+								<td>网站浏览、邮件收发等</td>
+								<td><span style="font-family:GOTHIC">50M</span>上下行对称，动态IP</td>
+								<td><span style="color:red;font-family:GOTHIC">526</span>元/月</td>
+							</tr>	
+							<tr>
+								<td>精品专线  / <span style="color:#A5359B">首月免租</span></td>
+								<td><span style="font-family:GOTHIC">OA/ERP/SAP</span>，视频会议等场景</td>
+								<td><span style="font-family:GOTHIC">50M</span>上下行对称，1个固定<span style="font-family:GOTHIC">IP</span></td>
+								<td><span style="color:red;font-family:GOTHIC">2189</span>元/月</td>
+							</tr>	
+							<tr style="background-color:#EFEBFA">
+								<td><span style="font-family:GOTHIC">IPMAN</span>  / <span style="color:#A5359B">首月免租</span></td>
+								<td>多<span style="font-family:GOTHIC">IP、</span>大型服务器集群搭建场景</td>
+								<td><span style="font-family:GOTHIC">10M</span>上下行对称，1个固定<span style="font-family:GOTHIC">IP</span></td>
+								<td><span style="color:red;font-family:GOTHIC">2100</span>元/月</td>
+							</tr>									
+						</tbody>						
+					</table>		
+					<br/>
+					<table  border="0px">
+						<tr >
+							<td style="width:120px"></td>
+							<td style="text-align:left;">
+								 <a href="skype:+864008207778?call"><img   width="100%"  src="./static/img/web/semqykd/立即免费在线咨询客服中心.png" ></a>
+							</td>	
+							<td style="width:16px"></td>
+							<td style="text-align:right">
+								 <a href="skype:+864008207778?call"><img   width="100%"  src="./static/img/web/semqykd/免费咨询热线电话.png" ></a>
+							</td>
+						</tr>								
+					</table>						
+					<br/><br/>
+					<hr style="background-color:#000000;height: 1.5px;width: 100%;margin:10px 0px" />
+				</div>
+		
+				<div>
+					<div style="text-align:left;">
+						<div style="margin-bottom:20px">
+							<table>
+								<tr>
+									<td style="width:20%"><img width="90%"  src="./static/img/web/semqykd/LOGO_中国联通.png"></td>
+									<td style="font-size:40px;">联通企业宽带 <span style="font-family:GOTHIC">China Unicom</span></td>
+								</tr>
+							</table>
+						</div>	
+					
+					</div>
+					<table  class="table table-condensed producttable " style="text-align: center;margin-top: 20px;font-size: 18px">
+						 <thead>
+							<th  style="background-color:#484D52;width:120px"><img width="100%"  src="./static/img/web/semqykd/首月免租.png"></th>
+							<th  style="background-color:#484D52;color:#FFFFFF">产品名称</th>
+							<th  style="background-color:#484D52;color:#FFFFFF">适&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用</th>
+							<th style="background-color:#484D52;color:#FFFFFF">配&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;置</th>
+							<th style="background-color:#484D52;color:#FFFFFF">价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</th>
+						</thead>
+						<tbody class="zftb">
+							<tr >
+								<td style="BORDER-RIGHT: #ffffff 2px solid; background-color:#EFEBFA;" rowspan="4">
+									<span style="font-size:20px;color:#A5359B">速办享豪礼</span><br/>
+									<span style="font-size:10px;color:red"><span style="font-family:GOTHIC">100M</span>宽带+云主机</span><br/>
+									<span style="font-size:10px;">点击这里了解详情</span><br/>
+									<span style="font-size:10px;">或者免费电话咨询</span><br/>
+									<span style="font-size:10px;">400-820-7778</span>
+								</td>
+								<td>沃 · 商务</td>
+								<td>商铺、初创企业类用户</td>
+								<td><span style="font-family:GOTHIC">50M</span>上下行不对称，动态IP</td>
+								<td><span style="color:red;font-family:GOTHIC">87</span>元/月</td>
+							</tr>
+							<tr style="background-color:#EFEBFA">
+								<td>沃 · 极速</td>
+								<td>网站浏览、邮件收发等</td>
+								<td><span style="font-family:GOTHIC">100M</span>上下行对称，动态IP</td>
+								<td><span style="color:red;font-family:GOTHIC">440</span>元/月</td>
+							</tr>	
+							<tr>
+								<td>沃 · 动车</td>
+								<td><span style="font-family:GOTHIC">OA/ERP/SAP</span>，视频会议等场景</td>
+								<td><span style="font-family:GOTHIC">40M</span>上下行对称，5个固定<span style="font-family:GOTHIC">IP</span></td>
+								<td><span style="color:red;font-family:GOTHIC">1833</span>元/月</td>
+							</tr>	
+							<tr style="background-color:#EFEBFA">
+								<td>沃 · 专线</td>
+								<td>多<span style="font-family:GOTHIC">IP、</span>大型服务器集群搭建场景</td>
+								<td><span style="font-family:GOTHIC">10M</span>上下行对称，1个固定<span style="font-family:GOTHIC">IP</span></td>
+								<td><span style="color:red;font-family:GOTHIC">4260</span>元/月</td>
+							</tr>									
+						</tbody>						
+					</table>		
+					<br/>
+					<table  border="0px">
+						<tr >
+							<td style="width:120px"></td>
+							<td style="text-align:left;">
+								 <a href="skype:+864008207778?call"><img   width="100%"  src="./static/img/web/semqykd/立即免费在线咨询客服中心.png" ></a>
+							</td>	
+							<td style="width:16px"></td>
+							<td style="text-align:right">
+								 <a href="skype:+864008207778?call"><img   width="100%"  src="./static/img/web/semqykd/免费咨询热线电话.png" ></a>
+							</td>
+						</tr>								
+					</table>							
+					<br/><br/>
+					<hr style="background-color:#000000;height: 1.5px;width: 100%;margin:10px 0px" />
+				</div>	
+
+
+				
+				<div>
+					<div style="text-align:left;">
+						<div style="margin-bottom:20px">
+							<table>
+								<tr>
+									<td style="width:20%"><img width="90%"  src="./static/img/web/semqykd/LOGO_中国移动.png"></td>
+									<td style="font-size:40px;">移动企业宽带 <span style="font-family:GOTHIC">CHINA MOBILE</span></td>
+								</tr>
+							</table>
+						</div>	
+					</div>
+					<table  class="table table-condensed producttable " style="text-align: center;margin-top: 20px;font-size: 18px">
+						 <thead>
+							<th  style="background-color:#484D52;width:120px"><img width="100%"  src="./static/img/web/semqykd/首月免租.png"></th>
+							<th  style="background-color:#484D52;color:#FFFFFF">产品名称</th>
+							<th  style="background-color:#484D52;color:#FFFFFF">适&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用</th>
+							<th style="background-color:#484D52;color:#FFFFFF">配&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;置</th>
+							<th style="background-color:#484D52;color:#FFFFFF">价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</th>
+						</thead>
+						<tbody class="zftb">
+							<tr >
+								<td style="BORDER-RIGHT: #ffffff 2px solid; background-color:#EFEBFA;" rowspan="4">
+									<span style="font-size:20px;color:#A5359B">速办享豪礼</span><br/>
+									<span style="font-size:10px;color:red">云主机/免费云固话</span><br/>
+									<span style="font-size:10px;">点击这里了解详情</span><br/>
+									<span style="font-size:10px;">或者免费电话咨询</span><br/>
+									<span style="font-size:10px;">400-820-7778</span>
+								</td>
+								<td>光网宽带</td>
+								<td>商铺、初创企业类用户</td>
+								<td>20M上下行对称，动态IP</td>
+								<td><span style="color:red;font-family:GOTHIC">223</span>元/月</td>
+							</tr>
+							<tr style="background-color:#EFEBFA">
+								<td>光网宽带</td>
+								<td>网站浏览、邮件收发等</td>
+								<td><span style="font-family:GOTHIC">50M</span>上下行对称，动态IP</td>
+								<td><span style="color:red;font-family:GOTHIC">273</span>元/月</td>
+							</tr>	
+							<tr>
+								<td>光网宽带</td>
+								<td><span style="font-family:GOTHIC">OA/ERP/SAP</span>，视频会议等场景</td>
+								<td><span style="font-family:GOTHIC">100M</span>上下行对称，动态IP</td>
+								<td><span style="color:red;font-family:GOTHIC">373</span>元/月</td>
+							</tr>	
+							<tr style="background-color:#EFEBFA">
+								<td>CMNET</td>
+								<td>多<span style="font-family:GOTHIC">IP、</span>大型服务器集群搭建场景</td>
+								<td><span style="font-family:GOTHIC">10M</span>上下行对称，1个固定<span style="font-family:GOTHIC">IP</span></td>
+								<td><span style="color:red;font-family:GOTHIC">360</span>元/月</td>
+							</tr>									
+						</tbody>						
+					</table>		
+					<br/>
+					<table  border="0px">
+						<tr >
+							<td style="width:120px"></td>
+							<td style="text-align:left;">
+								 <a href="skype:+864008207778?call"><img   width="100%"  src="./static/img/web/semqykd/立即免费在线咨询客服中心.png" ></a>
+							</td>	
+							<td style="width:16px"></td>
+							<td style="text-align:right">
+								 <a href="skype:+864008207778?call"><img   width="100%"  src="./static/img/web/semqykd/免费咨询热线电话.png" ></a>
+							</td>
+						</tr>								
+					</table>							
+					<br/><br/>
+					<hr style="background-color:#000000;height: 1.5px;width: 100%;margin:10px 0px" />
+				</div>					
+				
+				
+				
+				<div>
+					<div style="text-align:left;">
+						<div style="margin-bottom:20px">
+							<table>
+								<tr>
+									<td style="width:20%"><img width="90%"  src="./static/img/web/semqykd/LOGO_鹏博士.png"></td>
+									<td style="font-size:40px;">鹏博士企业宽带 <span style="font-family:GOTHIC">DR.PGROUPENG</span></td>
+								</tr>
+							</table>
+						</div>	
+					</div>
+					<table  class="table table-condensed producttable " style="text-align: center;margin-top: 20px;font-size: 18px">
+						 <thead>
+							<th  style="background-color:#484D52;width:120px"><img width="100%"  src="./static/img/web/semqykd/首月免租.png"></th>
+							<th  style="background-color:#484D52;color:#FFFFFF">产品名称</th>
+							<th  style="background-color:#484D52;color:#FFFFFF">适&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用</th>
+							<th style="background-color:#484D52;color:#FFFFFF">配&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;置</th>
+							<th style="background-color:#484D52;color:#FFFFFF">价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</th>
+						</thead>
+						<tbody class="zftb">
+							<tr >
+								<td style="BORDER-RIGHT: #ffffff 2px solid; background-color:#EFEBFA;" rowspan="4">
+									<span style="font-size:20px;color:#A5359B">速办享豪礼</span><br/>
+									<span style="font-size:10px;color:red">云主机/免费云固话</span><br/>
+									<span style="font-size:10px;">点击这里了解详情</span><br/>
+									<span style="font-size:10px;">或者免费电话咨询</span><br/>
+									<span style="font-size:10px;">400-820-7778</span>
+								</td>
+								<td>云@商城</td>
+								<td>商铺、初创企业类用户</td>
+								<td><span style="font-family:GOTHIC">50M</span>上下行不对称，动态IP，楼内接入</td>
+								<td><span style="color:red;font-family:GOTHIC">300</span>元/月</td>
+							</tr>
+							<tr style="background-color:#EFEBFA">
+								<td>云@商城</td>
+								<td>网站浏览、邮件收发等</td>
+								<td><span style="font-family:GOTHIC">100M</span>上下行不对称，动态IP，楼内接入</td>
+								<td><span style="color:red;font-family:GOTHIC">450</span>元/月</td>
+							</tr>	
+							<tr>
+								<td>云@快线</td>
+								<td><span style="font-family:GOTHIC">OA/ERP/SAP</span>，视频会议等场景</td>
+								<td><span style="font-family:GOTHIC">50M</span>上下行对称，动态IP，楼外拨号</td>
+								<td><span style="color:red;font-family:GOTHIC">500</span>元/月</td>
+							</tr>	
+							<tr style="background-color:#EFEBFA">
+								<td>云@动车</td>
+								<td>多<span style="font-family:GOTHIC">IP、</span>大型服务器集群搭建场景</td>
+								<td><span style="font-family:GOTHIC">50M</span>上下行对称，1个固定<span style="font-family:GOTHIC">IP</span></td>
+								<td><span style="color:red;font-family:GOTHIC">1408</span>元/月</td>
+							</tr>									
+						</tbody>						
+					</table>		
+					<br/>
+					<table  border="0px">
+						<tr >
+							<td style="width:120px"></td>
+							<td style="text-align:left;">
+								 <a href="skype:+864008207778?call"><img   width="100%"  src="./static/img/web/semqykd/立即免费在线咨询客服中心.png" ></a>
+							</td>	
+							<td style="width:16px"></td>
+							<td style="text-align:right">
+								 <a href="skype:+864008207778?call"><img   width="100%"  src="./static/img/web/semqykd/免费咨询热线电话.png" ></a>
+							</td>
+						</tr>								
+					</table>						
+					<br/><br/>
+					<hr style="background-color:#000000;height: 1.5px;width: 100%;margin:10px 0px" />
+				</div>	
+
+
+				<div>
+					<div style="text-align:left;">
+						<div style="margin-bottom:20px">
+							<table>
+								<tr>
+									<td style="width:20%"><img width="90%"  src="./static/img/web/semqykd/LOGO_速办网.png"></td>
+									<td style="font-size:40px;">速办网云光纤 FastKD.COM</td>
+								</tr>
+							</table>
+						</div>	
+					</div>
+					<table  class="table table-condensed producttable " style="text-align: center;margin-top: 20px;font-size: 18px">
+						 <thead>
+							<th  style="background-color:#484D52;width:120px"><img width="100%"  src="./static/img/web/semqykd/首月免租.png"></th>
+							<th  style="background-color:#484D52;color:#FFFFFF">产品名称</th>
+							<th  style="background-color:#484D52;color:#FFFFFF">适&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用</th>
+							<th style="background-color:#484D52;color:#FFFFFF">配&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;置</th>
+							<th style="background-color:#484D52;color:#FFFFFF">价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</th>
+						</thead>
+						<tbody class="zftb">
+							<tr >
+								<td style="BORDER-RIGHT: #ffffff 2px solid; background-color:#EFEBFA;" rowspan="2">
+									<span style="font-size:20px;color:#A5359B">速办享豪礼</span><br/>
+									<span style="font-size:10px;color:red">云主机/免费云固话</span><br/>
+								</td>
+								<td>云光纤套餐A</td>
+								<td><span style="font-family:GOTHIC">OA/ERP/SAP</span>，视频会议等场景</td>
+								<td><span style="font-family:GOTHIC">50M</span>上下行对称，1个固定<span style="font-family:GOTHIC">IP</span></td>
+								<td><span style="color:red;font-family:GOTHIC">1750</span>元/月</td>
+							</tr>
+							<tr style="background-color:#EFEBFA">
+								<td>云光纤套餐B</td>
+								<td><span style="font-family:GOTHIC">OA/ERP/SAP</span>，视频会议等场景</td>
+								<td><span style="font-family:GOTHIC">100M</span>上下行对称，1个固定<span style="font-family:GOTHIC">IP</span></td>
+								<td><span style="color:red;font-family:GOTHIC">2583</span>元/月</td>
+							</tr>										
+						</tbody>						
+					</table>		
+					<br/>
+					<table  border="0px">
+						<tr >
+							<td style="width:120px"></td>
+							<td style="text-align:left;">
+								 <a href="skype:+864008207778?call"><img   width="100%"  src="./static/img/web/semqykd/立即免费在线咨询客服中心.png" ></a>
+							</td>	
+							<td style="width:16px"></td>
+							<td style="text-align:right">
+								 <a href="skype:+864008207778?call"><img   width="100%"  src="./static/img/web/semqykd/免费咨询热线电话.png" ></a>
+							</td>
+						</tr>								
+					</table>							
+					<br/><br/>
+					<hr style="background-color:#000000;height: 1.5px;width: 100%;margin:10px 0px" />
+				</div>	
+
+				<div class="ptitle">企业宽带<span style="color:#b20059;">资源查询</span></div>
+			
+				<table >
+				   <tr>
+						<td>
+							<form id="form1" name="form1">
+								<table  border="0px" >
+									<tr>
+										<td style="padding: 5px 10px;background: #EFEFEF;border:#000000 solid 1px;text-align: left">
+											<span style="font-size: 14px">您的企业所在的位置</span>
+											<select id="city" name="city" style="background-color:#FFFFFF;padding-left:28px;border-radius: 0;border: 1px solid #b8b8b8;"  onChange="selectcityarea('city','country','form1');">
+												<option>上海市</option>
+											</select>
+											<select id="country" name="country"  style="background-color:#FFFFFF;padding-left:26px;border-radius: 0;border: 1px solid #b8b8b8;">
+												<option>静安区</option>
+											</select>
+										</td>
+										
+									</tr>
+								</table>
+							</form>
+							<script language="javascript">
+								first("city","country","form1",0,0);
+							</script>							
+						</td>
+						<td style="padding-left:10px;">
+							<table  border="0px" >
+								<tr>
+									<td style="padding:5px 10px;background: #EFEFEF;border:#000000 solid 1px;text-align: left">
+										<span style="font-size: 14px">手动输入您的企业地址</span>
+										<input type="text"   id="addr"  name="addr"    style="width:300px;border-radius: 0;border: 1px solid #b8b8b8;" />
+									</td>
+								</tr>
+							</table>
+							<input type="hidden" id="page"  name="page" value="HOME">
+							<input type="hidden" id="from"  name="from" value="PC">
+						</td>							
+				   </tr>
+				</table>
+				<table style="margin-top:13.5px">
+				   <tr>
+						<td>
+							<table  border="0px" >
+								<tr>
+									<td style="padding:5px 10px;background: #EFEFEF;border:#000000 solid 1px;text-align: left">
+										<span style="font-size: 14px">联系姓名</span>
+										<input  type="text" id="contactname"   name="contactname"   style="width:135px;border-radius: 0;border: 1px solid #b8b8b8;" />
+									</td>
+								</tr>
+							</table>
+						</td>	
+						<td style="padding-left:10px;">
+							<table  border="0px" >
+								<tr>
+									<td style="padding:5px 10px;background: #EFEFEF;border:#000000 solid 1px;text-align: left">
+										<span style="font-size: 14px">联系手机</span>
+										<input type="text"  id="contactmobile"   name="contactmobile"   style="width:140px;border-radius: 0;border: 1px solid #b8b8b8;" />
+										<!--
+										<span style="font-size: 14px;color: #A40B5D;margin-left: 10px"><a href="javascript:void(0)" style="text-decoration:none;color:#b20059"  onclick="getMobileCode()" >获取验证码</a></span>
+										-->
+										<input type="button" id="btn" style="color:#A40B5D;background-color:#EFEFEF;border: 0px;"  value="获取验证码" onclick="getMobileCode(this)" /> 
+									</td>
+								</tr>
+							</table>
+						</td>	
+						<td style="padding-left:10px;">
+							<table  border="0px" >
+								<tr>
+									<td style="padding:5px 10px;background: #EFEFEF;border:#000000 solid 1px;text-align: left">
+										<span style="font-size: 14px">短信验证码</span>
+										<input type="text"  id="verifycode"  name="verifycode"  style="width:100px;border-radius: 0;border: 1px solid #b8b8b8;" />
+									</td>
+								</tr>
+							</table>
+						</td>
+					   <td width="10px"></td>
+						<td style="border:#000000 solid 1px;margin: 0px;padding: 0px;background-color: #A40B5D;">
+							<a href="javascript:void(0)" onclick="submitNeed();" ><img width="100px"  src="./static/img/web/home/表单_提交查询需求.png" /></a>
+						</td>							
+				   </tr>
+				</table>				
+            </div>
+        </div>
+	    <br/><br/>
+		<div class="footer">
+				沪<span class="zftb">ICP</span>备<span class="zftb">18019641</span>号<span class="zftb">-1 Copyright © 2018 </span>上海罗夏信息技术有限公司 - 保留所有权利
+		</div>	   
+		<script>
+		var _hmt = _hmt || [];
+		(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?6bf7ae9b5212b8c52b57065299f133f8";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+		})();
+		</script>		
+    </body>
+</html>

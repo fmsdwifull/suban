@@ -41,9 +41,13 @@
 			});  			
 		}); 
 		
-		function linkyyz()
+		function linkyyz(obj)
 		{
-			window.location.href="huod.html";
+			//alert(obj.rel);
+			if(obj.rel=="1")
+				window.location.href="huod-txcp-zljh.html";
+			else
+			  window.location.href="huod.html";
 		}
 		
 		function submitNeed()
@@ -166,7 +170,7 @@
 			var timeInterval=3000;
 			var arr=new Array();
 			arr[0]="./static/img/web/huod/Banner_电信1元活动.jpg";
-			arr[1]="./static/img/web/home/banner.png";
+			arr[1]="./static/img/web/huod/Banner_电信战狼计划.jpg";
 			setInterval(changeImg,timeInterval);
 			function changeImg()
 			{
@@ -298,7 +302,7 @@
 			<img width="100%" src="static/img/web/home/Banner.jpg" style="display: none">
 			
 			<div style="width:100%;height:215px;padding:0px;">
-				<img  id="banner" width="100%"  src="./static/img/web/home/banner.png"  onclick="linkyyz()" >
+				<img  id="banner" width="100%"  src="./static/img/web/huod/Banner_电信1元活动.jpg"  rel="0"  onclick="linkyyz(this)"  style="cursor: pointer" >
 			</div>				
 <!-- 			<div style="width:100%;height:220px;padding:0px;background:url('./static/img/web/home/banner.png') no-repeat 0px 0px;background-size:cover"
 				 onmousemove="telover()" onmouseout="telout()" onclick="linkyyz()">
