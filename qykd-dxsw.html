@@ -109,8 +109,8 @@
 						<td style="width:40px"></td>
 						<td width="200px" style="vertical-align:bottom">	
 							<div class="search" style=""  >
-								<input type="text" name="fname"  style="border:none;width: 160px"/>
-								<img  src="./static/img/web/kdsuban/搜索_放大镜.png" /><br/>
+								<input type="text" id="key" name="fname"  style="border:none;width: 160px"/>
+								<img id="searchbtn" src="./static/img/web/kdsuban/搜索_放大镜.png"  style="cursor: pointer" onclick="searchByKey()"/><br/>
 								<hr style="background-color:#000000;height: 1.5px;width: 180px;padding-bottom:0px;margin-bottom:0px;margin-top:0px" />
 							</div> 
 						</td>
@@ -130,8 +130,8 @@
 						<span style="padding-left: 25px"><a href="subanlc.html">&nbsp;&nbsp;速办流程&nbsp;&nbsp;</a></span>
 					</div>
 					<div class="search">
-						<input type="text" name="fname"  style="border:none;width: 160px"/>
-						<img  src="./static/img/web/kdsuban/搜索_放大镜.png" />
+						<input type="text" id="key" name="fname"  style="border:none;width: 160px"/>
+						<img id="searchbtn" src="./static/img/web/kdsuban/搜索_放大镜.png"  style="cursor: pointer" onclick="searchByKey()"/>
 						<hr style="margin-top:5px;background-color: black;height: 1px" />
 					</div>
 

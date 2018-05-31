@@ -117,3 +117,55 @@ function setCheckState(obj)
 		obj.value=0;
 	}
 }
+
+function searchByKey()
+{
+	var searchContent = document.getElementById("key").value;
+	var url ="";
+	if(searchContent.indexOf('速办网')!=-1 || searchContent.indexOf('云光纤')!=-1){
+		url="home.html";
+	}else if(searchContent.indexOf('活动')!=-1 || searchContent.indexOf('一元')!=-1 || searchContent.indexOf('续租')!=-1){
+		url="huod.html";
+	}else if(searchContent.indexOf('战狼')!=-1 || searchContent.indexOf('计划')!=-1 || searchContent.indexOf('升级')!=-1){
+		url="huod.html";
+	}else if(searchContent.indexOf('营销')!=-1 || searchContent.indexOf('整合')!=-1 || searchContent.indexOf('品牌')!=-1|| searchContent.indexOf('视觉')!=-1){
+		url="wangl.html";
+	}else if(searchContent.indexOf('行业')!=-1 || searchContent.indexOf('专属')!=-1 || searchContent.indexOf('数据')!=-1 || searchContent.indexOf('专线')!=-1|| searchContent.indexOf('资费')!=-1|| searchContent.indexOf('套餐')!=-1){
+		url="hangy.html";
+	}else if(searchContent.indexOf('会展')!=-1 ){
+		url="zscp-hzkd.html";
+	}else if(searchContent.indexOf('公寓')!=-1 ){
+		url="zscp-gykd.html";
+	}else if(searchContent.indexOf('海外')!=-1 ||searchContent.indexOf('优化')!=-1){
+		url="zscp-hwyh.html";
+	}else if(searchContent.indexOf('资源')!=-1 ||searchContent.indexOf('查询')!=-1){
+		url="ziyuancx.html";
+	}else if(searchContent.indexOf('速办')!=-1 ||searchContent.indexOf('办理')!=-1||searchContent.indexOf('流程')!=-1){
+		url="subanlc.html";
+	}else if(searchContent.indexOf('IT')!=-1 ||searchContent.indexOf('it')!=-1||searchContent.indexOf('外包')!=-1){
+		url="itwb.html";
+	}else if(searchContent.indexOf('电脑')!=-1 ||searchContent.indexOf('闪修')!=-1||searchContent.indexOf('设备')!=-1||searchContent.indexOf('检修')!=-1||searchContent.indexOf('网络')!=-1||searchContent.indexOf('病毒')!=-1){
+		url="itw.html";
+	}else if(searchContent.indexOf('驻场')!=-1 ){
+		url="itzc.html";
+	}else if(searchContent.indexOf('全国范围')!=-1 ||searchContent.indexOf('案例')!=-1){
+		url="itqg.html";
+	}else  if(searchContent.indexOf('电信')!=-1 || searchContent.indexOf('宽带')!=-1||searchContent.indexOf('企业')!=-1 || searchContent.indexOf('通信')!=-1){
+		url="qiytx.html";
+	}else if(searchContent.indexOf('联通')!=-1 ){
+		url="liant.html";
+	}else if(searchContent.indexOf('移动')!=-1 ){
+		url="yid.html";
+	}else if(searchContent.indexOf('鹏博士')!=-1 ){
+		url="pengbs.html";
+	}
+	window.location.href = url;		
+}
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fb3de737644b93d7adee45eec3ed56e5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
