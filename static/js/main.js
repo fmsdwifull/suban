@@ -162,6 +162,15 @@ function searchByKey()
 	window.location.href = url;		
 }
 
+function opensem()
+{
+	window.location.href="sem-qykd.html";
+}		
+function openhome()
+{
+	window.location.href="home.html";
+}
+
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");

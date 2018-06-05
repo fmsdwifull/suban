@@ -210,6 +210,21 @@
 				alert("速办网云光纤宽带业务流程必须线下受理，请致电400-820-7778获取纸质协议书");
 			}				
 		}
+		
+		function sendToEmail(obj)
+		{
+			if(currentimg=="./static/img/web/sblc/宽带运营商_列表中国电信.png")
+			{
+				window.location.href="mailto:?subject=&body=下载地址：<br/><a href='http://www.fastkd.com/dianxin.zip'>http://www.fastkd.com/dianxin.zip</a>";
+			}
+		}
+		function downLoadFile(obj)
+		{
+		    if(currentimg=="./static/img/web/sblc/宽带运营商_列表中国电信.png")
+			{
+				window.location.href="http://www.fastkd.com/dianxin.zip";
+			}
+		}		
 </script>
 		<style type="text/css">
 			#m2{
@@ -280,7 +295,7 @@
 					<table border="0px">
 						<tr>
 							<td width="190px" style="vertical-align:bottom">
-								<img width="100%" src="./static/img/web/kdsuban/LOGO.png" />
+								<img width="100%" src="./static/img/web/kdsuban/LOGO.png"  style="cursor:pointer" onclick="openhome();"/>
 							</td>
 							<td style="width:30px"></td>
 							<td><div  class="secmenu" ><a href="qiytx.html">企业宽带</a></div></td>
@@ -304,7 +319,7 @@
 			    <!--
 				<div class="headerx" >
 					<div style="float:left;padding: 0px;margin: 0px;text-align: left;width: 21%">
-						<img style="width: 100%"; src="./static/img/web/kdsuban/LOGO.png" />
+						<img style="width: 100%"; src="./static/img/web/kdsuban/LOGO.png"  style="cursor:pointer" onclick="openhome();"/>
 					</div>
 					<td><div  class="secmenu" ><a href="qiytx.html">企业宽带</a></div></td>
 					<td>行业专属</span></td>
@@ -372,10 +387,14 @@
 					<br/><br/>
 					<span style="font-size:26px">填写互联网接入服务<span style="color:red">协议</span></span>
 					<br/><br/>
-					<table align="center" style="width:47%" border="0px" ">
+					<table align="center" style="width:47%" border="0px">
 						<tr>
-							<td style="padding-right:3px"><img style="width:100%" src="./static/img/web/sblc/发送至邮箱.png"/> </td>
-							<td><img style="width:100%" src="./static/img/web/sblc/直接下载.png"/> </td>
+							<td style="padding-right:3px">
+								<img  id="sendmail" style="width:100%;cursor:pointer" src="./static/img/web/sblc/发送至邮箱.png" onclick="sendToEmail(this)"/> 
+							</td>
+							<td>
+								<img id="download" style="width:100%;cursor:pointer" src="./static/img/web/sblc/直接下载.png"  onclick="downLoadFile(this)"/> 
+							</td>
 						</tr>
 					</table>
 					<br/>
@@ -398,8 +417,8 @@
 					<img style="width:300px" src="./static/img/web/sblc/开始使用.png"/>						
 				</div>			
 			<br/><br/>
-			<div class="footer">
-				沪<span class="zftb">ICP</span>备<span class="zftb">12010294</span>号<span class="zftb">-1 Copyright © 2018 </span>上海宽迪信息科技有限公司 - 保留所有权利
+			<div class="footer" onclick="opensem()" style="cursor:pointer">
+				沪<span class="zftb">ICP</span>备<span class="zftb">12010294</span>号<span class="zftb">-1 Copyright ? 2018 </span>上海宽迪信息科技有限公司 - 保留所有权利
 			</div>	
 		</div>
 		<script>

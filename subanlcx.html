@@ -35,7 +35,7 @@
 				  
 			});  			
 		}); 
-
+		
 		 var currentimg = './static/img/web/sblc/宽带运营商_列表中国电信.png';
 		 var isspread = 0;
 		 function changex(obj)
@@ -44,19 +44,44 @@
 			//alert(obj.parentNode.id);
 			//obj.parentNode.style="background-image: url('4.png'); text-align:right";
 			//obj.parentNode.parentNode.style= "background-image:url('1.png') ;background-size:100% 98%;text-align:right;padding-right:20px" 
-            //alert(obj.parentNode.id);
+  
+            //console.info(obj.getElementsByTagName('div'));
+			
+			if(obj.getElementsByTagName('div').length>0)
+			{
+				if(obj.getElementsByTagName('div')[0].id=="m1")
+				{
+					if(isspread==0)
+					{           
+						isspread =1;
+						$('#m2').css("display","block");
+						$('#m3').css("display","block");
+						$('#m4').css("display","block");
+						$('#m5').css("display","block");
+						$("#mimg").attr("src","./static/img/web/sblc/宽带运营商_收起箭头.png");
+					}else{
+						isspread =0;
+						$('#m2').css("display","none");
+						$('#m3').css("display","none");
+						$('#m4').css("display","none");
+						$('#m5').css("display","none");
+						$("#mimg").attr("src","./static/img/web/sblc/宽带运营商_下拉箭头.png");
+					}			
+				}
+			}
 
 			if(obj.parentNode.id=='m1')
 			{
 				if(isspread==0)
-				{
+				{           
 				    isspread =1;
 					$('#m2').css("display","block");
 					$('#m3').css("display","block");
 					$('#m4').css("display","block");
 					$('#m5').css("display","block");
-					//console.info(obj.parentNode);
 					$("#mimg").attr("src","./static/img/web/sblc/宽带运营商_收起箭头.png");
+										console.info(obj.parentNode);
+
 				}else{
 					isspread =0;
 					$('#m2').css("display","none");
@@ -149,6 +174,27 @@
 		    }
 		}
 		
+		 function cccccccccccc(obj)
+		 {
+				console.info(obj);
+				if(isspread==0)
+				{
+				    isspread =1;
+					$('#m2').css("display","block");
+					$('#m3').css("display","block");
+					$('#m4').css("display","block");
+					$('#m5').css("display","block");
+					//console.info(obj.parentNode);
+					$("#mimg").attr("src","./static/img/web/sblc/宽带运营商_收起箭头.png");
+				}else{
+					isspread =0;
+					$('#m2').css("display","none");
+					$('#m3').css("display","none");
+					$('#m4').css("display","none");
+					$('#m5').css("display","none");
+					$("#mimg").attr("src","./static/img/web/sblc/宽带运营商_下拉箭头.png");
+				}		 
+		 }		
 		function showInfo(currentimg)
 		{
 			if(currentimg=="./static/img/web/sblc/宽带运营商_列表中国电信.png")
@@ -164,6 +210,21 @@
 				alert("速办网云光纤宽带业务流程必须线下受理，请致电400-820-7778获取纸质协议书");
 			}				
 		}
+		
+		function sendToEmail(obj)
+		{
+			if(currentimg=="./static/img/web/sblc/宽带运营商_列表中国电信.png")
+			{
+				window.location.href="mailto:?subject=&body=下载地址：<br/><a href='http://www.fastkd.com/dianxin.zip'>http://www.fastkd.com/dianxin.zip</a>";
+			}
+		}
+		function downLoadFile(obj)
+		{
+		    if(currentimg=="./static/img/web/sblc/宽带运营商_列表中国电信.png")
+			{
+				window.location.href="http://www.fastkd.com/dianxin.zip";
+			}
+		}		
 </script>
 		<style type="text/css">
 			#m2{
@@ -186,12 +247,12 @@
 				<ul>
 					<li><a href="home.html" >首页</a></li>
 					<li><a href="huod.html" >活动专区</a></li>
-					<li><a href="wangl.html" >网络营销</a></li>
+					<li><a href="wangl.html" >整合营销</a></li>
 					<li><a href="qiytx.html" style="background-color: #f2f2f2;" >企业通信</a></li>
 					<li><a href="itw.html">IT 外包</a></li>
 					<li><a href="xit.html">系统集成</a></li>
 					<li><a href="qiyy.html">企业云</a></li>
-					<li><a href="jiat.html">家庭宽带</a></li>
+					<li><a href="qyjz.html">企业建站</a></li>
 					<li><a href="about.html">关于我们</a></li>
 					<!---第0种-->
 					<div id="li_0" >
@@ -236,14 +297,15 @@
 							<td width="190px" style="vertical-align:bottom">
 								<img width="100%" src="./static/img/web/kdsuban/LOGO.png" />
 							</td>
-							<td style="width:50px"></td>
-							<td><div  class="secmenu" ><a href="qiytx.html">&nbsp;&nbsp;企业宽带&nbsp;&nbsp;</a></div></td>
-							<td><div  class="secmenu" ><a href="hangy.html">&nbsp;&nbsp;行业专属&nbsp;&nbsp;</a></div></td>
-							<td><div  class="secmenu" ><a href="yuy.html">&nbsp;&nbsp;语音业务&nbsp;&nbsp;</a></div></td>
-							<td><div  class="secmenu" ><a href="ziyuancx.html">&nbsp;&nbsp;资源查询&nbsp;&nbsp;</a></div></td>
-							<td><span style="padding-bottom:10px; border-bottom:1px solid #000;color: #A40B5D">&nbsp;&nbsp;速办流程&nbsp;&nbsp;</span></td>
+							<td style="width:30px"></td>
+							<td><div  class="secmenu" ><a href="qiytx.html">企业宽带</a></div></td>
+							<td><div  class="secmenu" ><a href="hangy.html">行业专属</a></div></td>
+							<td><div  class="secmenu" ><a href="yuy.html">语音业务</a></div></td>
+							<td><div  class="secmenu" ><a href="ziyuancx.html">资源查询</a></div></td>
+							<td><span style="padding-bottom:10px; border-bottom:1px solid #000;color: #A40B5D">速办流程</span></td>
+							<td><div  class="secmenu" ><a href="jiat.html">家庭专区</a></div></td>
 							
-							<td style="width:60px"></td>
+							<td style="width:40px"></td>
 							<td width="200px" style="vertical-align:bottom">	
 								<div class="search" style=""  >
 									<input type="text" id="key" name="fname"  style="border:none;width: 160px"/>
@@ -259,11 +321,11 @@
 					<div style="float:left;padding: 0px;margin: 0px;text-align: left;width: 21%">
 						<img style="width: 100%"; src="./static/img/web/kdsuban/LOGO.png" />
 					</div>
-					<td><div  class="secmenu" ><a href="qiytx.html">&nbsp;&nbsp;企业宽带&nbsp;&nbsp;</a></div></td>
-					<td>&nbsp;&nbsp;行业专属&nbsp;&nbsp;</span></td>
-					<td><div  class="secmenu" ><a href="yuy.html">&nbsp;&nbsp;语音业务&nbsp;&nbsp;</a></div></td>
-					<td><div  class="secmenu" ><a href="ziyuancx.html">&nbsp;&nbsp;资源查询&nbsp;&nbsp;</a></div></td>
-					<td><div><span style="padding-bottom:10px; border-bottom:1px solid #000;color: #A40B5D">&nbsp;&nbsp;速办流程&nbsp;&nbsp;</a></div></td>					
+					<td><div  class="secmenu" ><a href="qiytx.html">企业宽带</a></div></td>
+					<td>行业专属</span></td>
+					<td><div  class="secmenu" ><a href="yuy.html">语音业务</a></div></td>
+					<td><div  class="secmenu" ><a href="ziyuancx.html">资源查询</a></div></td>
+					<td><div><span style="padding-bottom:10px; border-bottom:1px solid #000;color: #A40B5D">速办流程</a></div></td>					
 					<div class="search" >
 						<input type="text" id="key" name="fname"  style="border:none;width: 160px"/>
 						<img id="searchbtn" src="./static/img/web/kdsuban/搜索_放大镜.png"  style="cursor: pointer" onclick="searchByKey()"/><br/>
@@ -286,11 +348,9 @@
 							<td width="28%"  height="50px" style="background-color: #80CFF5; background-size: 80px 80px;  position:absolute;padding:10px 10px 0px 10px;" >
 								<table style="border-collapse:separate; border-spacing:0px 0px;" bolder="1px" >
 									<tr>
-										<td width="100%" height="30" style="background-image:url('./static/img/web/sblc/宽带运营商_列表中国电信.png') ;background-size:100% 100%;text-align:right;padding-right:20px">
+										<td width="100%" height="30" onclick="changex(this)"   style="background-image:url('./static/img/web/sblc/宽带运营商_列表中国电信.png') ;background-size:100% 100%;text-align:right;padding-right:20px">
 											<div id="m1"> 
-												<a href="#" onclick="changex(this)">
 											     <img   width="20px" id="mimg" src="./static/img/web/sblc/宽带运营商_下拉箭头.png" >
-											    </a>
 											</div>
 										</td>
 									</tr>	
@@ -327,10 +387,14 @@
 					<br/><br/>
 					<span style="font-size:26px">填写互联网接入服务<span style="color:red">协议</span></span>
 					<br/><br/>
-					<table align="center" style="width:47%" border="0px" ">
+					<table align="center" style="width:47%" border="0px">
 						<tr>
-							<td style="padding-right:3px"><img style="width:100%" src="./static/img/web/sblc/发送至邮箱.png"/> </td>
-							<td><img style="width:100%" src="./static/img/web/sblc/直接下载.png"/> </td>
+							<td style="padding-right:3px">
+								<img  id="sendmail" style="width:100%;cursor:pointer" src="./static/img/web/sblc/发送至邮箱.png" onclick="sendToEmail(this)"/> 
+							</td>
+							<td>
+								<img id="download" style="width:100%;cursor:pointer" src="./static/img/web/sblc/直接下载.png"  onclick="downLoadFile(this)"/> 
+							</td>
 						</tr>
 					</table>
 					<br/>
@@ -353,8 +417,8 @@
 					<img style="width:300px" src="./static/img/web/sblc/开始使用.png"/>						
 				</div>			
 			<br/><br/>
-			<div class="footer">
-				沪<span class="zftb">ICP</span>备<span class="zftb">12010294</span>号<span class="zftb">-1 Copyright © 2018 </span>上海宽迪信息科技有限公司 - 保留所有权利
+			<div class="footer" onclick="opensem()" style="cursor:pointer">
+				沪<span class="zftb">ICP</span>备<span class="zftb">12010294</span>号<span class="zftb">-1 Copyright ? 2018 </span>上海宽迪信息科技有限公司 - 保留所有权利
 			</div>	
 		</div>
 		<script>
