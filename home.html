@@ -52,12 +52,33 @@
 		
 		function submitNeed()
 		{
+			var mobile = $('#contactmobile').val();
+			if(getStrLength(mobile)!=11)
+			{
+				alert("请输入正确的手机号码");
+				return false;
+			}	
+			var mobile = $('#verifycode').val();
+			if(getStrLength(mobile)!=6)
+			{
+				alert("请输入正确的验证码");
+				return false;
+			}
+			var mobile = $('#contactname').val();
+			if(getStrLength(mobile)==0)
+			{
+				alert("请输入您的姓名");
+				return false;
+			}			
+			
 			var clientdata = {};
 			clientdata['city'] = $('#city').find("option:selected").text();
 			clientdata['country'] =  $('#country').find("option:selected").text();
 			clientdata['addr'] =  $('#addr').val();;
 			clientdata['contactname'] =  $('#contactname').val();;
 			clientdata['contactmobile'] =  $('#contactmobile').val();
+			clientdata['verifycode'] =  $('#verifycode').val();
+			
 			clientdata['page'] =  $('#page').val();;
 			clientdata['from'] =  $('#from').val();;
 
@@ -66,14 +87,16 @@
 			console.info(clientdata);
 			$.ajax({
 			//几个参数需要注意一下
-				type: "POST",//方法类型
-				url: "http://www.cloud-open.cn/client.php?c=feedback&a=pushClientNeed" ,//url
+				type: "get",//方法类型
+				url: "http://116.236.115.125:9000/spframe/public/index.php/sms/uploadClientInfo" ,//url
 				data: {'ctd':clientdata},
-				success: function (result) {
-					alert("提交成功，敬请等待客服联系！");
+				success: function(msg) {
+					alert(msg);
+					window.location.reload();
 				},
-				error : function() {
-					alert("异常！");
+				error : function(xhr,errorText,errorType) {
+					//alert(errorType);
+					//alert("异常！");
 				}
 			});		
 		}		
@@ -137,8 +160,8 @@
 			}
 			$.ajax({
 			//几个参数需要注意一下
-				type: "POST",//方法类型
-				url: "http://www.cloud-open.cn/client.php?c=feedback&a=getVerifyCode",//url
+				type: "get",//方法类型
+				url: "http://116.236.115.125:9000/spframe/public/index.php/sms/getVerifyCode",//url
 				data: {'mobile':mobile},
 				success: function (result) {
 					alert(result);
@@ -161,7 +184,7 @@
 			setTimeout(function() { 
 				settime(obj) }
 				,1000) 
-		}	
+		}		
 		</script>
 
 		<script type="text/javascript">
