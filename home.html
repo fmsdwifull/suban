@@ -84,15 +84,16 @@
 
 
 			var  clientdata = JSON.stringify(clientdata);
-			console.info(clientdata);
+			//console.info(clientdata);
 			$.ajax({
 			//几个参数需要注意一下
 				type: "get",//方法类型
-				url: "http://116.236.115.125:9000/spframe/public/index.php/sms/uploadClientInfo" ,//url
+				url: "sf/public/sms/uploadClientInfo" ,//url
 				data: {'ctd':clientdata},
 				success: function(msg) {
 					alert(msg);
-					window.location.reload();
+					if(msg=="信息提交成功，客服会稍后主动联系您！")
+						window.location.reload();
 				},
 				error : function(xhr,errorText,errorType) {
 					//alert(errorType);
@@ -161,7 +162,7 @@
 			$.ajax({
 			//几个参数需要注意一下
 				type: "get",//方法类型
-				url: "http://116.236.115.125:9000/spframe/public/index.php/sms/getVerifyCode",//url
+				url: "/sf/public/sms/getVerifyCode",//url
 				data: {'mobile':mobile},
 				success: function (result) {
 					alert(result);
@@ -461,10 +462,8 @@
 										<td style="padding: 5px 10px;background: #EFEFEF;border:#000000 solid 1px;text-align: left">
 											<span style="font-size: 14px">您的企业所在的位置</span>
 											<select id="city" name="city" style="background-color:#FFFFFF;padding-left:28px;border-radius: 0;border: 1px solid #b8b8b8;"  onChange="selectcityarea('city','country','form1');">
-												<option>上海市</option>
 											</select>
 											<select id="country" name="country"  style="background-color:#FFFFFF;padding-left:26px;border-radius: 0;border: 1px solid #b8b8b8;">
-												<option>静安区</option>
 											</select>
 										</td>
 										
@@ -472,7 +471,7 @@
 								</table>
 							</form>
 							<script language="javascript">
-								first("city","country","form1",0,0);
+								first("city","country","form1","03","0304");
 							</script>							
 						</td>
 						<td style="padding-left:10px;">
